@@ -178,6 +178,14 @@ const build = series(
 );
 const dev = parallel(build, watchFiles, serve);
 
+
+const ghPages = require('gulp-gh-pages');
+
+gulp.task('deploy', function() {
+  return gulp.src('./dist/**/*')
+    .pipe(ghPages());
+});
+
 /* Exports Tasks */
 exports.html = html;
 exports.php = php; // Добавлено
