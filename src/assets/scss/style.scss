@@ -1,0 +1,11 @@
+.container {
+  margin: 0 auto;
+  max-width: 105rem;
+}
+
+
+
+
+@import './vendor/setting.scss';
+@import './blocks/header.scss';
+@import './blocks/content.scss';
