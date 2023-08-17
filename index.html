@@ -62,8 +62,8 @@
             <div class="header-title">
               <h1 class="header-title__title">Ремонт техники Apple в Одинцово</h1>
               <form class="header-title__form">
-                <input type="text" class="header-title__phone" id="phone" placeholder="+7 (__) __-__-__">
-                  <button class="header-title__submit" type="submit" >Записаться на ремонт</button>
+                <input type="text" class="phone-number" id="phone" placeholder="+7 (__) __-__-__">
+                  <button class="call-button" type="submit" >Записаться на ремонт</button>
                   <p>Отправляя заявку, Вы даете согласие с политикой конфиденциальности согласно Федерального закона №152-ФЗ</p>
               </form>
             </div>
@@ -99,80 +99,214 @@
               <div class="container">
             
                 <h1 class="content-title">Выберите модель вашего устройства и неисправность</h1>
+                <!-- 1 -->
+                <section class="content-services">
             
-                <div class="content-services">
-                  <div class="content-services__filter"></div>
-                  <div class="content-services__prise">
-                    <ol>
+                  <div class="content-services__filter">
+                    <p class="content-services__filter-title">Цены указаны с учетом проведения работ в сервисном центре (деталь +
+                      работа)</p>
+                    <div id='accordion' class="accordion">
+                      <ul>
+                        <li><a href='#'>iPhone</a>
+                          <ul>
+                            <li>5</li>
+                            <li>5S</li>
+                            <li>6</li>
+                            <li>6+</li>
+                            <li>SE</li>
+                            <li>6S</li>
+                            <li>6S+</li>
+                            <li>7</li>
+                            <li>7+</li>
+                            <li>5</li>
+                            <li>5S</li>
+                            <li>6</li>
+                            <li>6+</li>
+                            <li>SE</li>
+                            <li>6S</li>
+                            <li>6S+</li>
+                            <li>7</li>
+                            <li>7+</li>
+                            <li>5</li>
+                            <li>5S</li>
+                            <li>6</li>
+                            <li>6+</li>
+                            <li>SE</li>
+                            <li>6S</li>
+                            <li>6S+</li>
+                            <li>7</li>
+                            <li>7+</li>
+                          </ul>
+                        </li>
+            
+                        <li><a href='#'>iPad</a>
+                          <ul>
+                            <li>iPad</li>
+                            <li>iPad 2</li>
+                            <li>iPad 3</li>
+                            <li>iPad 4</li>
+                            <li>iPad mini</li>
+                            <li>iPad Air</li>
+                          </ul>
+                        </li>
+            
+                        <li><a href='#'>MacBook</a>
+                          <ul>
+                            <li>iPad</li>
+                            <li>iPad 2</li>
+                            <li>iPad 3</li>
+                            <li>iPad 4</li>
+                            <li>iPad mini</li>
+                            <li>iPad Air</li>
+                          </ul>
+                        </li>
+            
+                        <li><a href='#'>iMac</a>
+                          <ul>
+                            <li>iPad</li>
+                            <li>iPad 2</li>
+                            <li>iPad 3</li>
+                            <li>iPad 4</li>
+                            <li>iPad mini</li>
+                            <li>iPad Air</li>
+                          </ul>
+                        </li>
+            
+            
+                      </ul>
+                    </div>
+                    <button class="content-services__button">Нужна консультация</button>
+                  </div>
+            
+            
+                  <div class="content-services__price">
+                    <ol id="priceList">
+                      <!-- js -->
                       <li class="content-services__list">
-            
                         <div>
                           <p class="content-services__title">Замена дисплея (оригинал)</p>
                           <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
                           </p>
                         </div>
                         <div>
-                          <p class="content-services__old-prise" >2600 p</p>
-                          <p class="content-services__new-prise">2600 p</p>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
                         </div>
                       </li>
-                      <li class="content-services__list">
-            
-                        <div>
-                          <p class="content-services__title">Замена дисплея (оригинал)</p>
-                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
-                          </p>
-                        </div>
-                        <div>
-                          <p class="content-services__old-prise" >2600 p</p>
-                          <p class="content-services__new-prise">2600 p</p>
-                        </div>
-                      </li>
-                      <li class="content-services__list">
-            
-                        <div>
-                          <p class="content-services__title">Замена дисплея (оригинал)</p>
-                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
-                          </p>
-                        </div>
-                        <div>
-                          <p class="content-services__old-prise" >2600 p</p>
-                          <p class="content-services__new-prise">2600 p</p>
-                        </div>
-                      </li>
-                      <li class="content-services__list">
-            
-                        <div>
-                          <p class="content-services__title">Замена дисплея (оригинал)</p>
-                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
-                          </p>
-                        </div>
-                        <div>
-                          <p class="content-services__old-prise" >2600 p</p>
-                          <p class="content-services__new-prise">2600 p</p>
-                        </div>
-                      </li>
-                      <li class="content-services__list">
-            
-                        <div>
-                          <p class="content-services__title">Замена дисплея (оригинал)</p>
-                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
-                          </p>
-                        </div>
-                        <div>
-                          <p class="content-services__old-prise" >2600 p</p>
-                          <p class="content-services__new-prise">2600 p</p>
-                        </div>
-                      </li>
-            
-            
-            
-            
-            
                     </ol>
                   </div>
-                </div>
+                </section>
+                <!-- 2 -->
+                <section class="content-description">
+            
+                  <div class="content-description__subtitle">
+                    <h1 class="content-description___name">OdiFix</h1>
+                    <div>
+                      <h3 class="content-description__title">Ремонт техники Apple в Одинцово</h3>
+                      <p class="content-description__text">Большинство ремонтов в нашем центре выполняются при Вас за 20 -30 минут.
+                        Работы производят специалисты с
+                        многолетним стажем ремонта мобильной техники.
+                        <br><br>
+                        Качественные запчасти и гарантия на их работу до 1 года. Мы ориентированный прежде всего на высокое качество
+                        работы и при этом минимальные затраты Вашего времени!
+                      </p>
+            
+                    </div>
+            
+                    <button class="call-button">Записаться на ремонт</button>
+                  </div>
+            
+            
+                  <div class="content-description__image">
+                    <img src="./assets/images/Rectangle3.jpg" alt="phone">
+                  </div>
+            
+                  <ul class="content-description__list">
+                    <li>
+                      <p class="list-title">Наблюдайте</p>
+                      <p class="list-subtitle">В нашем сервисе Вы можете наблюдать за ремонтом Вашего устройства</p>
+                    </li>
+                    <li>
+                      <p class="list-title">Комплектующие</p>
+                      <p class="list-subtitle">Мы закупаем комплектующие напрямую у завода производителя.</p>
+                    </li>
+                    <li>
+                      <p class="list-title">Проверка</p>
+                      <p class="list-subtitle">мы не спрашиваем пароль от устройства, все проверки мы делаем под наблюдением
+                        клиента.</p>
+                    </li>
+                    <li>
+                      <p class="list-title">Время ремонта</p>
+                      <p class="list-subtitle">В среднем на ремонт уходит - 20-30 минут.</p>
+                    </li>
+                  </ul>
+            
+                </section>
+                <!-- 3 -->
+                <section class="content-slogan">
+                  <div class="content-slogan__header">
+                    <h1 class="content-slogan__header-title">Сервис, достойный Apple</h1>
+                    <p class="content-slogan__header-subtitle">Быстро. Качественно. Да, это реально!</p>
+                  </div>
+            
+                  <ul class="content-slogan__list">
+                    <li>
+                      <p class="content-slogan__list-title">01</p>
+                      <p class="content-slogan__list-subtitle">Бесплатная диагностика Вашего устройства</p>
+                    </li>
+                    <li>
+                      <p class="content-slogan__list-title">02</p>
+                      <p class="content-slogan__list-subtitle">Среднее время выполнения ремонта до 30 мин</p>
+                    </li>
+                    <li>
+                      <p class="content-slogan__list-title">03</p>
+                      <p class="content-slogan__list-subtitle">Используем только новые запчасти</p>
+                    </li>
+                    <li>
+                      <p class="content-slogan__list-title">04</p>
+                      <p class="content-slogan__list-subtitle">Гарантия 1 год на все виды работ и комплектующие</p>
+                    </li>
+                    <li>
+                      <p class="content-slogan__list-title">05</p>
+                      <p class="content-slogan__list-subtitle">Возможен выезд мастера по городу Одинцово</p>
+                    </li>
+                    <li>
+                      <p class="content-slogan__list-title">06</p>
+                      <p class="content-slogan__list-subtitle">Оплата банковской картой прямо на месте, без %</p>
+                    </li>
+                  </ul>
+            
+                </section>
+                <!-- 4 -->
+                <section class="content-instruction">
+                  <div class="content-instruction__wrapper">
+                    <p class="content-instruction__title">Как работает наш сервисный центр</p>
+                    <ul class="content-instruction__list">
+                      <li>
+                        <p class="content-instruction__list-title">Шаг 1</p>
+                        <p class="content-instruction__list-subtitle">Вы привозите устройство к нам в сервисный центр</p>
+                      </li>
+                      <li>
+                        <p class="content-instruction__list-title">Шаг 2</p>
+                        <p class="content-instruction__list-subtitle">Мастер производит диагностику и ремонт за 20-30 минут</p>
+                      </li>
+                      <li>
+                        <p class="content-instruction__list-title">Шаг 3</p>
+                        <p class="content-instruction__list-subtitle">Оплачиваете банковской картой или наличными без комиссии</p>
+                      </li>
+            
+                    </ul>
+            
+                    <button class="call-button">Записаться на ремонт</button>
+                  </div>
+                  <div class="content-instruction-image">
+                    <img src="./assets/images/phone2.png" alt="phone">
+                  </div>
+                </section>
               </div>
+            
+            
+            
             
             
             </body>
