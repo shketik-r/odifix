@@ -147,7 +147,7 @@ a {
 
 .header-title .header-title__title {
     width: 65rem;
-    font-size: 5.37rem;
+    font-size: 5.37em;
     line-height: 112px;
     letter-spacing: 0em;
     text-align: left;
@@ -250,6 +250,7 @@ a {
     line-height: 7rem;
     letter-spacing: 0em;
     text-align: left;
+    text-transform: uppercase;
     margin-bottom: 5rem;
 }
 
@@ -571,6 +572,7 @@ a {
     line-height: 7rem;
     letter-spacing: 0em;
     text-align: left;
+    text-transform: uppercase;
 }
 
 .content-instruction .content-instruction__wrapper .content-instruction__list {
