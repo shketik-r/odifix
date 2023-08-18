@@ -588,6 +588,10 @@ a {
     justify-content: space-between;
 }
 
+.content-instruction .content-instruction__wrapper .button {
+    z-index: 1;
+}
+
 .content-instruction .content-instruction__wrapper .content-instruction__title {
     font-size: 5.37rem;
     line-height: 7rem;
