@@ -1,33 +1,15 @@
 
 $(document).ready(function () {
-  $("#phone").inputmask({ "mask": "+7 (99) 99-99-99" });
+  $("#phoneMaskHeader").inputmask({ "mask": "+7 (99) 99-99-99" });
+});
+$(document).ready(function () {
+  $("#phoneMaskContent").inputmask({ "mask": "+7 (99) 99-99-99" });
 });
 
-
-$(document).ready(function () {
-  $('#accordion > ul > li > a').click(function () {
-    var checkElement = $(this).next();
-
-    $('#accordion li').removeClass('active');
-    $(this).closest('li>ul').css({
-      display: 'flex'
-    });
-    if ((checkElement.is('ul')) && (checkElement.is(':visible'))) {
-      $(this).closest('li').removeClass('active');
-      checkElement.slideUp('normal');
-    }
-
-    if ((checkElement.is('ul')) && (!checkElement.is(':visible'))) {
-      $('#accordion ul ul:visible').slideUp('normal');
-      checkElement.slideDown('normal');
-    }
-    if (checkElement.is('ul')) {
-      return false;
-    } else {
-      return true;
-    }
-  });
-
+$('.accordion').accordion({
+	heightStyle: 'content',
+	header: '> .accordion-item > .accordion-header',
+  active: 0,
 });
 
 
@@ -58,6 +40,22 @@ $(function() {
     owl.trigger("prev.owl.carousel");
   });
 });
+
+
+
+$('#content-services').each(function() {
+	let ths = $(this);
+	ths.find('.tab-item').not(':first').hide();
+	ths.find('.tab').click(function() {
+    $('html, body').animate({
+      scrollTop: $(".content-services").offset().top // класс объекта к которому приезжаем
+      }, 1000); // Скорость прокрутки
+		ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+		ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
+	}).eq(0).addClass('active');
+});
+
+
 
 
 
