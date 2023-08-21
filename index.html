@@ -61,7 +61,7 @@
             <div class="header-title">
               <h1 class="header-title__title">Ремонт техники Apple в Одинцово</h1>
               <form class="form-call">
-                <input type="text" class="phone-number" id="phone" placeholder="+7 (__) __-__-__">
+                <input type="text" class="phone-number" id="phoneMaskHeader" placeholder="+7 (__) __-__-__">
                   <button class="button" type="submit" >Записаться на ремонт</button>
                   <p>Отправляя заявку, Вы даете согласие с политикой конфиденциальности согласно Федерального закона №152-ФЗ</p>
               </form>
@@ -102,26 +102,25 @@
             
                 <h1 class="content-title">Выберите модель вашего устройства и неисправность</h1>
                 <!-- 1 -->
-                <section class="content-services">
+                <section class="content-services" id="content-services">
             
-                  <div class="content-services__filter">
+                  <div class="content-services__filter" id="sticky">
                     <p class="content-services__filter-title">Цены указаны с учетом проведения работ в сервисном центре (деталь +
                       работа)</p>
-                    <div id='accordion' class="accordion">
-                      <ul>
-                        <li>
-            
-                          <a href='#'>iPhone</a>
-            
+                    <div class="accordion">
+                      <div class="accordion-item">
+                        <div class="accordion-header">iPhone</div>
+                        <div>
                           <ul>
-                            <li>5</li>
-                            <li>5S</li>
-                            <li>6</li>
+                            <li class="tab">5</li>
+                            <li class="tab">5S</li>
+                            <li class="tab">6</li>
                             <li>6+</li>
                             <li>SE</li>
                             <li>6S</li>
                             <li>6S+</li>
-                            <li>7</li>
+                            <li>7</li>  
+                            <li>7+</li>
                             <li>8</li>
                             <li>8+</li>
                             <li>SE2020</li>
@@ -131,7 +130,7 @@
                             <li>5XS MAX</li>
                             <li>11</li>
                             <li>11 PRO</li>
-                            <li>11PRO MAX</li>
+                            <li>11 PRO MAX</li>
                             <li>12 MiNi</li>
                             <li>12</li>
                             <li>12 PRO</li>
@@ -141,9 +140,12 @@
                             <li>13 PRO</li>
                             <li>13 PRO MAX</li>
                           </ul>
-                        </li>
+                        </div>
+                      </div>
             
-                        <li><a href='#'>iPad</a>
+                      <div class="accordion-item">
+                        <div class="accordion-header">iPad</div>
+                        <div>
                           <ul>
                             <li>iPad</li>
                             <li>iPad 2</li>
@@ -152,17 +154,25 @@
                             <li>iPad mini</li>
                             <li>iPad Air</li>
                           </ul>
-                        </li>
+                        </div>
             
-                        <li><a href='#'>MacBook</a>
+                      </div>
+            
+                      <div class="accordion-item">
+                        <div class="accordion-header">MacBook</div>
+                        <div>
                           <ul>
                             <li>MacBook PRO</li>
                             <li>MacBook Air</li>
                             <li>MacBook</li>
                           </ul>
-                        </li>
+                        </div>
             
-                        <li><a href='#'>iMac</a>
+                      </div>
+            
+                      <div class="accordion-item">
+                        <div class="accordion-header">iMac</div>
+                        <div>
                           <ul>
                             <li> iMac (24 дюйма, чип M1, 2021 г.)</li>
                             <li> iMac (с дисплеем Retina 5K, 27 дюймов, 2019 г.)</li>
@@ -171,19 +181,17 @@
                             <li>iMac Pro</li>
                             <li>iMac (с дисплеем Retina 5K, 27 дюймов, 2017 г.)</li>
                           </ul>
-                        </li>
+                        </div>
             
-            
-                      </ul>
+                      </div>
                     </div>
                     <button class="button">Нужна консультация</button>
                   </div>
             
             
                   <div class="content-services__price">
-                    <ol id="priceList">
-                      <!-- js -->
-                      <li class="content-services__list">
+                    <ul class="tab-item" id="content-1">
+                      <li class="content-services__list" >
                         <div>
                           <p class="content-services__title">Замена дисплея (оригинал)</p>
                           <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
@@ -194,7 +202,187 @@
                           <p class="content-services__new-price">2600 p</p>
                         </div>
                       </li>
-                    </ol>
+                    </ul>
+                    <ul class="tab-item" id="content-2">
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                    </ul>
+                    <ul class="tab-item" id="content-3">
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li>
+                      <li class="content-services__list" >
+                        <div>
+                          <p class="content-services__title">Замена дисплея (оригинал)</p>
+                          <p class="content-services__description">Дисплей разбился, нет изображения, не работает сенсорное стекло
+                          </p>
+                        </div>
+                        <div>
+                          <p class="content-services__old-price">2600 p</p>
+                          <p class="content-services__new-price">2600 p</p>
+                        </div>
+                      </li> 
+                    </ul>
                   </div>
                 </section>
                 <!-- 2 -->
@@ -517,7 +705,7 @@
                         src="https://api-maps.yandex.ru/services/constructor/1.0/js/?um=constructor%3A0821ac7c792c93d7c4edd297aeb026c6d90620689552f28c5eed309263e6f7f2&amp;width=825&amp;height=534&amp;lang=ru_RU&amp;scroll=true"></script>
                     </div>
                     <form class="form-call">
-                      <input type="text" class="phone-number" id="phone" placeholder="+7 (__) __-__-__">
+                      <input type="text" class="phone-number" id="phoneMaskContent" placeholder="+7 (__) __-__-__">
                       <button class="button" type="submit">Записаться на ремонт</button>
                       <p>Отправляя заявку, Вы даете согласие с политикой конфиденциальности согласно Федерального закона №152-ФЗ</p>
                     </form>
@@ -548,7 +736,7 @@
             <div class="footer">
               
                 <div class="footer__menu">
-                  <img src="../assets/images/logo.jpg" alt="logo">
+                  <img src="../assets/images/svg/Logo.svg" alt="logo">
                   <ul class="footer__list">
                     <li><a href="#">Ремонт iPhone</a></li>
                     <li><a href="#">Ремонт iPad</a></li>
@@ -587,7 +775,10 @@
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery/3.7.0/jquery.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inputmask/3.3.4/jquery.inputmask.bundle.min.js"></script>
     <script src="https://cdnjs.cloudflare.com/ajax/libs/OwlCarousel2/2.3.4/owl.carousel.min.js"></script>
-   
+
+    <script src="https://ajax.googleapis.com/ajax/libs/jqueryui/1.12.1/jquery-ui.min.js"></script>
+
+
     <!-- JavaScript Bundle with Popper -->
     <script src="/assets/js/index.js"></script>
 </body>
