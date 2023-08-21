@@ -133,8 +133,19 @@ a {
     margin-bottom: 4rem;
 }
 
+.header-nav__logo {
+    text-align: center;
+}
+
 .header-nav__logo img {
     width: 11.75rem;
+}
+
+.header-nav__logo p {
+    font-family: "Inter";
+    font-size: 1.06rem;
+    color: #808080;
+    font-weight: 400;
 }
 
 .header-nav__menu {
@@ -713,6 +724,12 @@ a {
     border: 1px solid #4E42AE;
     background: white;
     cursor: pointer;
+    box-shadow: 0 0 0 0;
+}
+
+.content-carousel .content-carousel__button .prev_button:hover,
+.content-carousel .content-carousel__button .next_button:hover {
+    box-shadow: 0px 4px 10px 0px #4E42AE;
 }
 
 .content-carousel .owl-carousel__item-header {
@@ -857,11 +874,6 @@ a {
     justify-content: space-between;
     -ms-flex-align: center;
     align-items: center;
-}
-
-.footer .footer__menu img {
-    width: 8.5rem;
-    height: 3.25rem;
 }
 
 .footer .footer__menu .footer__list {
