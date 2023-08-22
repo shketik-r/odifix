@@ -1,6 +1,6 @@
 .content-title {
-  font-size: 5.37rem;
-  line-height: 7rem;
+  font-size: 8.6rem;
+  line-height: 11.2rem;
   letter-spacing: 0em;
   text-align: left;
   text-transform: uppercase;
@@ -10,46 +10,49 @@
 .content-services {
   display: flex;
   justify-content: space-between;
-  padding-top: 3rem;
-  margin-bottom: 6.25rem;
+  padding-top: 4.8rem;
+  margin-bottom: 20rem;
 
   #sticky {
     position: sticky;
-    top: 2rem;
+    top: 3.2rem;
   }
 
 
   .content-services__filter {
-    width: 33.75rem;
-    max-height: 812px;
+    width: 54rem;
+    max-height: 81.2rem;
   }
 
   .content-services__filter-title {
     font-weight: 400;
-    line-height: 29px;
+    line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: left;
+    margin-bottom: 3rem;
   }
 
   /*-------------------accordion-----------------------*/
 
   .accordion {
-    width: 33.75rem;
-    margin-bottom: 6.25rem;
+    width: 54rem;
+    margin-bottom: 10rem;
 
   }
 
   .accordion .accordion-item {
-    padding: 1.25rem 0rem;
+    padding: 2rem 0rem 1rem 0;
     border-bottom: 1px solid $gray;
+    margin-bottom: 1.2rem;
   }
 
   .accordion .ui-accordion-header {
     font-family: IBM Plex Mono;
-    font-size: 1.62rem;
+    font-size: 2.6rem;
     letter-spacing: 0em;
     text-align: left;
-    padding: 0.62rem 0;
+    padding: 1.5rem 0;
+
     background: #ffffff;
     cursor: pointer;
     outline: none;
@@ -58,26 +61,26 @@
   .accordion .ui-accordion-content {
     ul {
       display: flex;
-      gap: 1.25rem;
+      gap: 2rem;
       flex-wrap: wrap;
 
     }
 
     li {
-      min-height: 1.81rem;
+      min-height: 2.9rem;
       position: relative;
       cursor: pointer;
       letter-spacing: 0em;
       text-align: left;
-      padding-top: 4px;
+      padding-top: 0.4rem;
 
       &::before {
         content: '';
         position: absolute;
         left: 0;
-        bottom: -0.25rem;
+        bottom: -0.4rem;
         width: 0;
-        height: 0.25rem;
+        height: 0.4em;
         background-color: #4E42AE;
       }
 
@@ -116,11 +119,12 @@
 
   .accordion .ui-accordion-header-icon {
     display: inline-block;
-    width: 4.06rem;
-    height: 1.43rem;
-    border: 1px solid #CDCED2;
+    width: 6.5rem;
+    height: 2.3rem;
+    border: 0.1rem solid #CDCED2;
     border-radius: 3.5rem;
     background: url(../images/svg/icon_down.svg) 50% 50% no-repeat;
+
   }
 
   .accordion .ui-accordion-header-active .ui-accordion-header-icon {
@@ -136,20 +140,19 @@
 
 
   .content-services__price {
-    width: 60.43rem;
-
+    width: 96.7rem;
   }
 
 
   .content-services__list {
     // height: 5.31rem;
-    padding: 0.62rem 3.12rem;
-    border-radius: 0.62rem;
+    padding: 1rem 5rem;
+    border-radius: 1rem;
     background: #F4F4F4;
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 1rem;
+    margin-bottom: 1.6rem;
     cursor: pointer;
 
     &:hover {
@@ -164,7 +167,7 @@
 
   .content-services__title {
 
-    line-height: 1.81rem;
+    line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: left;
   }
@@ -172,7 +175,7 @@
   .content-services__description {
 
     font-weight: 400;
-    line-height: 1.81rem;
+    line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: left;
     color: #989898;
@@ -181,14 +184,14 @@
 
   .content-services__old-price {
     color: #989898;
-    font-size: 0.87;
+    font-size: 1.4rem;
     font-weight: 400;
     text-decoration: line-through;
   }
 
   .content-services__new-price {
-    font-size: 1.625rem;
-    line-height: 2.93rem;
+    font-size: 2.6rem;
+    line-height: 4.6rem;
     letter-spacing: 0em;
     text-align: left;
     color: #EC0A94;
@@ -201,19 +204,19 @@
   display: flex;
   justify-content: space-between;
   flex-wrap: wrap;
-  margin-bottom: 12.5rem;
+  margin-bottom: 17rem;
 
 
 
   .content-description__subtitle {
-    width: 33.56rem;
+    width: 53.7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     .content-description___name {
-      font-size: 5.37rem;
-      line-height: 7rem;
+      font-size: 8.6rem;
+      line-height: 11.2rem;
       letter-spacing: 0em;
       text-align: left;
       text-transform: uppercase;
@@ -221,27 +224,29 @@
     }
 
     .content-description__title {
-      font-size: 1.62rem;
-      line-height: 2.93rem;
+      font-size: 2.6rem;
+      line-height: 4.6rem;
       letter-spacing: 0em;
       text-align: left;
-      margin-bottom: 1.87rem;
+      margin-bottom: 3rem;
     }
 
     .content-description__text {
       font-weight: 400;
-      line-height: 1.81rem;
+      line-height: 2.9rem;
       letter-spacing: 0em;
       text-align: left;
     }
 
     .button {
-      width: 24.81rem;
+      width: 39.7rem;
+      margin-bottom: 0;
     }
   }
 
   .content-description__image {
-    width: 42.68rem;
+    width: 68.2rem;
+    height: 74rem;
 
     img {
       width: 100%;
@@ -250,29 +255,30 @@
   }
 
   .content-description__list {
-    width: 24.81rem;
+    width: 39.7rem;
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     li {
       width: 100%;
-      padding: 1.25rem;
-      border-radius: 0.65rem;
+      padding: 2rem;
+      border-radius: 1rem;
       border: 1px solid $gray;
 
 
       .list-title {
-        font-size: 1.62rem;
-        line-height: 2.93rem;
+        font-size: 2.5rem;
+        line-height: 4.6rem;
         letter-spacing: 0em;
         text-align: left;
+        margin-bottom: 1rem;
       }
 
       .list-subtitle {
 
         font-weight: 400;
-        line-height: 1.81rem;
+        line-height: 2.9rem;
         letter-spacing: 0em;
         text-align: left;
 
@@ -285,17 +291,17 @@
 
 .content-slogan {
   width: 100%;
-  margin-bottom: 12.5rem;
+  margin-bottom: 17rem;
 
   .content-slogan__header {
     display: flex;
     align-items: flex-end;
     justify-content: space-between;
-    margin-bottom: 6.25rem;
+    margin-bottom: 11rem;
 
     .content-slogan__header-title {
-      font-size: 5.37rem;
-      line-height: 5rem;
+      font-size: 8.6rem;
+      line-height: 8rem;
       letter-spacing: 0em;
       text-align: left;
       text-transform: uppercase;
@@ -303,7 +309,7 @@
 
     .content-slogan__header-subtitle {
       font-weight: 400;
-      line-height: 1.81rem;
+      line-height: 2.9rem;
       letter-spacing: 0em;
       text-align: left;
 
@@ -314,15 +320,15 @@
     display: flex;
     flex-wrap: wrap;
     justify-content: space-between;
-    min-height: 35.62rem;
+    min-height: 57rem;
 
     li {
-      width: 51.56rem;
-      height: 10.62rem;
-      padding: 1.25rem;
-      border-radius: 0.62rem;
+      width: 82.5rem;
+      height: 16.9rem;
+      padding: 2rem;
+      border-radius: 1rem;
       background: $lightGray;
-      margin-bottom: 1.87rem;
+      margin-bottom: 3rem;
       display: flex;
       align-items: center;
 
@@ -330,16 +336,16 @@
     }
 
     .content-slogan__list-title {
-      font-size: 6.25rem;
-      line-height: 8.12rem;
+      font-size: 10rem;
+      line-height: 13rem;
       letter-spacing: 0em;
       text-align: left;
       color: $blue;
-      margin-right: 3.12rem;
+      margin-right: 5rem;
     }
 
     .content-slogan__list-subtitle {
-      line-height: 1.81rem;
+      line-height: 2.9rem;
       letter-spacing: 0em;
       text-align: left;
     }
@@ -349,59 +355,61 @@
 .content-instruction {
   display: flex;
   justify-content: space-between;
-
-  margin-bottom: 12.5rem;
+  margin-bottom: 20rem;
 
   .content-instruction__wrapper {
-    width: 51.56rem;
-    height: 51.5rem;
+    width: 82.8rem;
+
     display: flex;
     flex-direction: column;
     justify-content: space-between;
 
     .button {
       z-index: 1;
+      margin-bottom: 0;
     }
 
     .content-instruction__title {
-      font-size: 5.37rem;
-      line-height: 7rem;
+      font-size: 8.6rem;
+      line-height: 11.2rem;
       letter-spacing: 0em;
       text-align: left;
       text-transform: uppercase;
+      margin-bottom: 8rem;
 
     }
 
     .content-instruction__list {
       display: flex;
       flex-direction: column;
-      gap: 1.25rem;
+      gap: 2rem;
+      margin-bottom: 8rem;
 
       li {
-        width: 24.81rem;
-        height: 7.5rem;
+        width: 39.7rem;
+        height: 12rem;
         border: 1px solid $gray;
-        border-radius: 0.62rem;
-        padding: 1.25rem;
+        border-radius: 1rem;
+        padding: 2rem;
         display: flex;
         align-items: center;
-        ;
+
       }
 
       .content-instruction__list-title {
-        width: 11rem;
-        font-size: 1.62rem;
-        line-height: 2.93rem;
+        width: 17.6rem;
+        font-size: 2.6rem;
+        line-height: 4.6rem;
         letter-spacing: 0em;
         text-align: left;
         color: $pink;
-        margin-right: 1.87rem;
+        margin-right: 3rem;
 
       }
 
       .content-instruction__list-subtitle {
         font-weight: 400;
-        line-height: 1.81rem;
+        line-height: 2.9rem;
         letter-spacing: 0em;
         text-align: left;
 
@@ -411,18 +419,19 @@
 
 
   .content-instruction-image {
-    width: 51.56rem;
-    height: 51.5em;
+    // width: 82.4rem;
+    // height: 82.4rem;
     position: relative;
 
     img {
-
+      width: 121.4rem;
+      height: 82.4rem;
       position: absolute;
-      top: 0;
+      top: 3rem;
       right: 0;
     }
 
-    ;
+
 
   }
 }
@@ -430,24 +439,29 @@
 .content-carousel {
   width: 100%;
   position: relative;
-  margin-bottom: 12.5rem;
+  margin-bottom: 17rem;
+
+
+  .content-carousel__wrapper {
+    margin-bottom: 2.5rem;
+  }
 
   .content-carousel__title {
-    font-size: 5.37rem;
-    line-height: 7rem;
+    font-size: 8.6rem;
+    line-height: 11.2rem;
     letter-spacing: 0em;
     text-align: left;
-    margin-bottom: 2.5rem;
+    margin-bottom: 10rem;
     text-transform: uppercase;
   }
 
 
   .owl-carousel {
     .owl-carousel__item {
-      width: 33.75rem;
-      height: 20.62rem;
-      padding: 1.87rem;
-      border-radius: 0.62rem;
+      width: 54rem;
+      height: 33rem;
+      padding: 3rem;
+      border-radius: 1rem;
       background: $lightGray;
       display: flex;
       flex-direction: column;
@@ -457,24 +471,31 @@
 
 
   .content-carousel__button {
-    width: 9.37rem;
-    margin-bottom: 1.87rem;
+    width: 15rem;
+    margin-bottom: 3rem;
     position: absolute;
-    top: 6rem;
+    top: 15rem;
     right: 0;
+    display: flex;
+    justify-content: space-between;
+
+    svg {
+      width: 0.6rem;
+      height: 1.4rem;
+    }
 
     .prev_button,
     .next_button {
-      width: 3.75rem;
-      height: 1.87rem;
-      border-radius: 3.5rem;
+      width: 6rem;
+      height: 3rem;
+      border-radius: 5.6rem;
       border: 1px solid $blue;
       background: $white;
       cursor: pointer;
       box-shadow: 0 0 0 0;
 
       &:hover {
-        box-shadow: 0px 4px 10px 0px $blue;
+        box-shadow: 0px 0.4rem 1rem 0px $blue;
       }
     }
   }
@@ -483,29 +504,34 @@
     display: flex;
     align-items: center;
     justify-content: space-between;
-    margin-bottom: 0.62rem;
+    margin-bottom: 1rem;
   }
 
   .owl-carousel__user-name {
-    font-size: 1.62rem;
+    font-size: 2.6rem;
     font-weight: 700;
-    line-height: 2.93rem;
+    line-height: 4.6rem;
     letter-spacing: 0em;
     text-align: left;
   }
 
   .owl-carousel__text {
     font-weight: 400;
-    line-height: 1.81rem;
+    line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: left;
   }
 
-  .owl-carousel__user-evaluation {}
+  .owl-carousel__user-evaluation {
+    svg {
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+  }
 
   .owl-carousel__date {
     font-weight: 400;
-    line-height: 1.81rem;
+    line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: left;
     color: $darkGrey;
@@ -518,23 +544,24 @@
   }
 
   .button--center {
-    width: 33.75rem;
+    width: 54rem;
   }
 }
 
 
 .content-contacts {
   width: 100%;
-  margin-bottom: 12.5rem;
+  margin-bottom: 19.2rem;
 
   .content-contacts__title {
 
-    font-size: 5.37rem;
+    font-size: 8.6rem;
     font-weight: 700;
-    line-height: 7rem;
+    line-height: 11.2rem;
     letter-spacing: 0em;
     text-align: left;
-    margin-bottom: 6.25rem;
+    margin-bottom: 10rem;
+    text-transform: uppercase;
   }
 
   .content-contacts__wrapper {
@@ -546,46 +573,49 @@
   }
 
   .content-contacts__list {
-    height: 22.75rem;
-    width: 24.8rem;
-    padding: 1.25rem;
-    border-radius: 0.62rem;
+    height: 36.4rem;
+    width: 39.6rem;
+    padding: 2rem;
+    border-radius: 1rem;
     display: flex;
     flex-direction: column;
-    gap: 1.25rem;
+    gap: 2rem;
     background: $blue;
     color: $white;
 
     .content-contacts__list-title {
 
-      font-size: 1.62rem;
-      line-height: 2.93rem;
+      font-size: 2.6rem;
+      line-height: 4.6rem;
       letter-spacing: 0em;
       text-align: left;
     }
 
     .content-contacts__list-phone-number {
-      line-height: 1.81rem;
+      line-height: 2.9rem;
       letter-spacing: 0em;
       text-align: left;
     }
 
     .content-contacts__list-text {
-      font-size: 0.87rem;
+      font-size: 1.4rem;
       font-weight: 400;
-      line-height: 1.12rem;
+      line-height: 1.8rem;
       letter-spacing: 0em;
       text-align: left;
     }
   }
 
-  .content-contacts__map {}
+  .content-contacts__map {
+    width: 82.5rem;
+    height: 53.4rem;
+  }
 
   .form-call {
-    width: 24.87rem;
-    height: 18.25rem;
-    padding: 1.25rem;
-    border-radius: 0.62rem;
+    width: 39.8rem;
+    height: 29.2rem;
+    padding: 2rem;
+    border-radius: 1rem;
     border: 1px solid $gray;
   }
 }
