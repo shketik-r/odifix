@@ -29,6 +29,7 @@
 
 
 .header-nav__menu {
+  // width: 84.5rem;
   font-weight: 400;
   line-height: 3rem;
   letter-spacing: 0em;
@@ -116,7 +117,7 @@
     justify-content: center;
 
     &:hover {
-      box-shadow: 2px 4px 5px 0px;
+      box-shadow: 0.2rem 0.4rem 0.5rem 0rem;
     }
 
     img {
@@ -137,66 +138,3 @@
 }
 
 
-.header-title {
-  width: 100%;
-  display: flex;
-  align-items: flex-start;
-  justify-content: space-between;
-  margin-bottom: 5rem;
-
-  .header-title__title {
-
-    width: 104rem;
-    font-size: 8.6rem;
-    line-height: 11.1rem;
-    // letter-spacing: 0em;
-    text-align: left;
-    text-transform: uppercase;
-  }
-
-}
-
-.header-info {
-  width: 100%;
-  border-radius: 1rem;
-  background: $blue;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  flex-wrap: wrap;
-  margin-bottom: 20rem;
-
-  .header-info__wrapper {
-    display: flex;
-    align-items: center;
-
-    .header-info__line {
-      margin-left: 3rem;
-
-      svg {
-
-        height: 8.5rem;
-      }
-    }
-  }
-
-  .header-info__info {
-    width: 36.8rem;
-    line-height: 2.9rem;
-    letter-spacing: 0em;
-    color: $white;
-    height: 31.2rem;
-    display: flex;
-    flex-wrap: wrap;
-    margin: 3.2rem;
-    position: relative;
-    margin-left: 8rem;
-  }
-
-  .header-info__image-phone {
-    width: 102.6rem;
-    img {
-      width: 100%;
-    }
-  }
-}
