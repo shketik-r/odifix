@@ -1,4 +1,6 @@
-
+.main {
+  margin-top: 7.4rem;
+}
 
 .header-title {
   width: 100%;
@@ -12,7 +14,7 @@
     width: 104rem;
     font-size: 8.6rem;
     line-height: 11.1rem;
-    // letter-spacing: 0em;
+
     text-align: left;
     text-transform: uppercase;
   }
@@ -58,6 +60,7 @@
 
   .header-info__image-phone {
     width: 102.6rem;
+
     img {
       width: 100%;
     }
@@ -88,7 +91,7 @@
 
   .content-services__filter {
     width: 54rem;
-    max-height: 81.2rem;
+    // max-height: 90rem;
   }
 
   .content-services__filter-title {
@@ -147,7 +150,7 @@
         left: 0;
         bottom: -0.4rem;
         width: 0;
-        height: 0.4em;
+        height: 0.3em;
         background-color: #4E42AE;
       }
 
@@ -220,6 +223,7 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1.6rem;
+
     cursor: pointer;
 
     &:hover {
@@ -227,6 +231,7 @@
       color: $white;
 
       .content-services__description {
+
         color: $white;
       }
     }
@@ -240,7 +245,7 @@
   }
 
   .content-services__description {
-
+    width: 67.3rem;
     font-weight: 400;
     line-height: 2.9rem;
     letter-spacing: 0em;
@@ -317,8 +322,17 @@
 
     img {
       width: 100%;
+      transition: 1s
 
+   
     }
+
+    img:hover {
+      transform: scale(1.1); /* Увеличиваем масштаб */
+    }
+
+
+
   }
 
   .content-description__list {
@@ -399,7 +413,15 @@
       display: flex;
       align-items: center;
 
+      &:hover,
+      &:focus {
+        animation: pulse 1s;
+        box-shadow: 0 0 0 2em transparent;
+      }
 
+      @keyframes pulse {
+        0% { box-shadow: 0 0 0 0 $lightGray; }
+      }
     }
 
     .content-slogan__list-title {

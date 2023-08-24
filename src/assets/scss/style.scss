@@ -94,10 +94,19 @@ html {
   }
 }
 
+.hidden{
+  display: none;
+}
+
 
 
 @import './vendor/setting.scss';
 @import './blocks/header.scss';
+
 @import './blocks/main.scss';
 @import './blocks/categories.scss';
+@import './blocks/subcategories.scss';
+@import './blocks/buyout.scss';
+@import './blocks/reviews.scss';
+
 @import './blocks/footer.scss';

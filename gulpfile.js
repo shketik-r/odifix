@@ -178,7 +178,7 @@ const build = series(
 );
 const dev = parallel(build, watchFiles, serve);
 
-
+ 
 const ghPages = require('gulp-gh-pages');
 
 gulp.task('deploy', function() {

@@ -1,88 +1,22 @@
-.repair {
-  width: 100%;
-  margin-bottom: 20rem;
-
-  .repair__top {
-    margin-bottom: 7rem;
-    display: flex;
-    justify-content: space-between;
-  }
-
-  .repair__top-left {
-    width: 82.5rem;
-  }
-
-  .repair__title {
-    font-size: 8.6rem;
-    line-height: 11.1rem;
-    letter-spacing: 0;
-    text-align: left;
-    margin-bottom: 4rem;
-    text-transform: uppercase;
 
 
-  }
-
-  .repair__subtitle {
-    font-weight: 400;
-    line-height: 2.9rem;
-    letter-spacing: 0em;
-    text-align: left;
-
-  }
-
-  .repair__top-list {
-    width: 82.6rem;
-    display: flex;
-    flex-wrap: wrap;
-    gap: 3rem;
-
-    .repair__top-item {
-      width: 39.8rem;
-      height: 12rem;
-      padding: 2rem;
-      border-radius: 1rem;
-      border: 0.1rem solid #CDCED2;
-      line-height: 2.9rem;
-      letter-spacing: 0em;
-      text-align: left;
-      display: flex;
-      align-items: center;
-
-
-    }
-
-    .repair__top-item--border {
-      width: 39.8rem;
-      height: 12rem;
-      padding: 0;
-      border: none;
-      display: flex;
-      align-items: flex-end;
-
-      .button {
-        margin: 0;
-      }
-    }
-  }
-
-
-
-
-
-  .repair__bottom {
-    width: 192rem;
-    height: 20.4rem;
-    padding: 5rem 43.6rem;
-    background: #F4F4F4;
-    
-
-  }
+.categories {
+  margin-top: 5rem;
 }
 
+.breadcrumbs {
 
+  font-weight: 400;
+  line-height: 1.8rem;
+  letter-spacing: 0em;
+  text-align: left;
 
+  span {
+    color: $blue;
+  }
 
+  margin-bottom: 4rem;
+}
 
 
 
@@ -91,6 +25,7 @@
 .content-services {
 
   .content-services__filter {
+    
     width: 54rem;
     max-height: 81.2rem;
   }
@@ -105,12 +40,11 @@
 
   .content-services-list {
     display: flex;
-    gap: 2rem;
+    gap: 1rem;
     flex-wrap: wrap;
     margin-bottom: 10rem;
 
     li {
-      font-size: 2.6rem;
       font-size: 2.6rem;
       line-height: 4.7rem;
       letter-spacing: 0em;
@@ -119,6 +53,7 @@
       position: relative;
       cursor: pointer;
       padding-top: 0.4rem;
+      margin-right: 1.9rem;
 
       &::before {
         content: '';
@@ -156,3 +91,4 @@
 
 
 }
+

@@ -7,53 +7,69 @@ $(document).ready(function () {
 });
 
 $('.accordion').accordion({
-	heightStyle: 'content',
-	header: '> .accordion-item > .accordion-header',
+  heightStyle: 'content',
+  header: '> .accordion-item > .accordion-header',
   active: 0,
 });
 
 
-$(function() {
+$(function () {
   // Owl Carousel
   var owl = $(".owl-carousel");
   owl.owlCarousel({
     items: 3,
     margin: 10,
     loop: true,
-    responsive:{
-      0:{
-        items:1
+    responsive: {
+      0: {
+        items: 1
       },
-      768:{
-        items:2
+      768: {
+        items: 2
       },
-      1180:{
-        items:3
+      1180: {
+        items: 3
       }
     }
   });
-  $(".next_button").click(function(){
+  $(".next_button").click(function () {
     owl.trigger("next.owl.carousel");
   });
-   
-  $(".prev_button").click(function(){
+
+  $(".prev_button").click(function () {
     owl.trigger("prev.owl.carousel");
   });
 });
 
-
-
-$('#content-services').each(function() {
-	let ths = $(this);
-	ths.find('.tab-item').not(':first').hide();
-	ths.find('.tab').click(function() {
+$('#content-services').each(function () {
+  let ths = $(this);
+  ths.find('.tab').click(function () {
     $('html, body').animate({
       scrollTop: $(".content-services").offset().top // класс объекта к которому приезжаем
-      }, 1000); // Скорость прокрутки
-		ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
-		ths.find('.tab-item').hide().eq($(this).index()).fadeIn()
-	}).eq(0).addClass('active');
+    }, 1000); // Скорость прокрутки
+    ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
+  });
 });
+
+
+
+let showContent = document.getElementById('showContent');
+let tab = document.querySelectorAll(".tab")
+
+
+tab.forEach(el => {
+  if (el.classList.contains('active')) {
+    let content = el.querySelector('.hidden').innerHTML;
+    showContent.innerHTML = content;
+  }
+
+  el.addEventListener("click", () => {
+
+    let content = el.querySelector('.hidden').innerHTML;
+    showContent.innerHTML = content;
+  })
+});
+
 
 
 
