@@ -223,7 +223,8 @@ a {
     cursor: pointer;
 }
 
-.navbar a:hover, .dropdown:hover .dropbtn {
+.navbar a:hover,
+.dropdown:hover .dropbtn {
     color: #4E42AE;
 }
 
@@ -232,12 +233,33 @@ a {
     position: absolute;
     top: 100%;
     left: calc(50% - 48rem);
-    width: 80rem;
+    padding: 5rem;
     background-color: #fff;
     border: 1px solid #CDCED2;
     border-radius: 0 0 1rem 1rem;
     border-top: 0;
     z-index: 1;
+}
+
+.dropdown-content ul {
+    -webkit-columns: 4 auto;
+    -moz-columns: 4 auto;
+    columns: 4 auto;
+    -webkit-column-gap: 3rem;
+    -moz-column-gap: 3rem;
+    column-gap: 3rem;
+}
+
+.dropdown-content li {
+    padding: 1rem;
+}
+
+.dropdown-content a {
+    font-weight: 700;
+    line-height: 2.9rem;
+    letter-spacing: 0em;
+    text-align: left;
+    padding: 0 !important;
 }
 
 /* Links inside the dropdown */
@@ -415,12 +437,11 @@ a {
 
 .content-services .accordion .accordion-item {
     padding: 2rem 0rem 1rem 0;
-    border-bottom: 1px solid #CDCED2;
+    border-bottom: 0.1rem solid #CDCED2;
     margin-bottom: 1.2rem;
 }
 
 .content-services .accordion .ui-accordion-header {
-    font-family: IBM Plex Mono;
     font-size: 2.6rem;
     letter-spacing: 0em;
     text-align: left;
@@ -453,7 +474,7 @@ a {
     left: 0;
     bottom: -0.4rem;
     width: 0;
-    height: 0.3em;
+    height: 0.2em;
     background-color: #4E42AE;
 }
 
