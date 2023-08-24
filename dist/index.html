@@ -49,7 +49,7 @@
     }
 
     ._progress__inner {
-      columns: 2;
+      /* columns: 2; */
     }
 
     ul,
@@ -87,7 +87,7 @@
       font-weight: 700;
       text-transform: uppercase;
       color: black;
-      transition: opacity 0.3s;
+      transition: opacity 0.5s;
     }
 
     @media(max-width: 1024px) {
@@ -98,7 +98,11 @@
 
     @media (any-hover: hover) {
       ._progress__link:hover {
+
         opacity: 0.5;
+        -webkit-transform: scale(1.1);
+  -ms-transform: scale(1.1);
+  transform: scale(1.1);
       }
     }
   </style>
@@ -114,11 +118,12 @@
           <ol>
 
           
-          <li><a href="main.html" class="_progress__link">Главная</a></li>
-          <li><a href="categories.html" class="_progress__link">Категории</a></li>
-          <li><a href="subcategories.html" class="_progress__link">Подкатегории</a></li>
-          <li><a href="buyout.html" class="_progress__link">Скупка</a></li>
-          <li><a href="reviews.html" class="_progress__link">Отзывы</a></li>
+          <li><a href="main.html" class="_progress__link" target="_blank">Главная</a></li>
+          <li><a href="categories.html" class="_progress__link" target="_blank">Категории</a></li>
+          <li><a href="subcategories.html" class="_progress__link" target="_blank">Подкатегории</a></li>
+          <li><a href="buyout.html" class="_progress__link" target="_blank">Скупка</a></li>
+          <li><a href="reviews.html" class="_progress__link" target="_blank">Отзывы</a></li>
+          <li><a href="contacts.html" class="_progress__link" target="_blank">Контакты</a></li>
           
           </ol>
       </div>

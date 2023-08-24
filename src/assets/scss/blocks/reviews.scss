@@ -4,7 +4,8 @@
 
 
 .content-reviews {
- margin-bottom:  20rem;
+  margin-bottom: 20rem;
+
   .content-reviews__header {
     display: flex;
     align-items: center;
@@ -25,7 +26,7 @@
   }
 
 
-  .content-reviews__elem{
+  .content-reviews__elem {
     width: 54rem;
     height: 33rem;
     padding: 3rem;
@@ -34,6 +35,7 @@
     display: flex;
     flex-direction: column;
     justify-content: space-between;
+
     &:hover,
     &:focus {
 
@@ -42,45 +44,90 @@
 
     }
   }
-}
-.content-reviews__wrapper{
-  display: flex;
-  flex-wrap: wrap;
-  gap: 3rem;
-}
-.owl-carousel__item-header {
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
-  margin-bottom: 1rem;
-}
 
-.owl-carousel__user-name {
-  font-size: 2.6rem;
-  font-weight: 700;
-  line-height: 4.6rem;
-  letter-spacing: 0em;
-  text-align: left;
-}
 
-.owl-carousel__text {
-  font-weight: 400;
-  line-height: 2.9rem;
-  letter-spacing: 0em;
-  text-align: left;
-}
-
-.owl-carousel__user-evaluation {
-  svg {
-    width: 2.3rem;
-    height: 2.3rem;
+  .content-reviews__wrapper {
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+    margin-bottom: 4rem;
   }
-}
 
-.owl-carousel__date {
-  font-weight: 400;
-  line-height: 2.9rem;
-  letter-spacing: 0em;
-  text-align: left;
-  color: $darkGrey;
+  .content-reviews__item-header {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    margin-bottom: 1rem;
+  }
+
+  .content-reviews__user-name {
+    font-size: 2.6rem;
+    font-weight: 700;
+    line-height: 4.6rem;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .content-reviews___text {
+    font-weight: 400;
+    line-height: 2.9rem;
+    letter-spacing: 0em;
+    text-align: left;
+  }
+
+  .content-reviews___evaluation {
+    svg {
+      width: 2.3rem;
+      height: 2.3rem;
+    }
+  }
+
+  .content-reviews__date {
+    font-weight: 400;
+    line-height: 2.9rem;
+    letter-spacing: 0em;
+    text-align: left;
+    color: $darkGrey;
+  }
+
+  .pagination {
+    width: 100%;
+    display: flex;
+    justify-content: center;
+  }
+
+  .pagination__list {
+    display: flex;
+    
+    gap: 1.5rem;
+  }
+
+  .pagination__item {
+
+    width: 4rem;
+    height: 4rem;
+    border-radius: 0.5rem;
+    border: 0.1rem solid #CDCED2;
+    padding: 0.5rem 0;
+    text-align: center;
+    line-height: 2.9rem;
+    letter-spacing: 0em;
+    &:hover{
+      background: $pink;
+      a{
+        color: $white;
+      }
+    }
+
+
+    a {
+      color: $black;
+      
+    }
+
+  }
+
+
+
+
 }

@@ -41,7 +41,8 @@
 
       a {
         &:hover {
-          font-weight: 700;
+         color: $blue;
+         font-weight: 700;
         }
       }
     }
@@ -86,18 +87,27 @@
     align-items: center;
     justify-content: space-between;
 
-    img {
+    svg {
       width: 2rem;
       height: 2rem;
+      transition: 0.5s
+    }
+    svg:hover {
+      transform: scale(1.1); 
     }
   }
 
   .footer__contacts-phone-number {
     display: flex;
-
-    img {
+    transition: 0.5s;
+    svg{
+      height: 1.8rem;
       width: 1.8rem;
       margin-right: 1rem;
+    
+    }
+    &:hover {
+      transform: scale(1.1); 
     }
 
   }
