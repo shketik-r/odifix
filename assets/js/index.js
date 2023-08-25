@@ -56,7 +56,6 @@ $('#content-services').each(function () {
 let showContent = document.getElementById('showContent');
 let tab = document.querySelectorAll(".tab")
 
-
 tab.forEach(el => {
   if (el.classList.contains('active')) {
     let content = el.querySelector('.hidden').innerHTML;
@@ -64,7 +63,6 @@ tab.forEach(el => {
   }
 
   el.addEventListener("click", () => {
-
     let content = el.querySelector('.hidden').innerHTML;
     showContent.innerHTML = content;
   })
@@ -74,7 +72,118 @@ tab.forEach(el => {
 
 
 
+let buttonOpen = document.querySelectorAll(".button-open");
+let buttonOpenThanks = document.querySelector(".button-open-thaks");
+let buttonOpenReviews = document.querySelector(".button-open-reviews");
 
+let buttonClose = document.querySelectorAll(".icon-close");
+let buttonCloseThanks = document.querySelector(".icon-close-thanks");
+let buttonCloseReviews = document.querySelector(".icon-close-reviews");
+
+let popupRequisition = document.querySelector(".popup-requisition-wrapper");
+let popupThanks = document.querySelector(".popup-thanks-wrapper");
+let popupReviews = document.querySelector(".popup-reviews-wrapper");
+
+let forms = document.querySelectorAll(".form-call")
+
+let fileNameIcon = document.querySelector(".file-name__icon")
+let fileNameWrapper = document.querySelector(".file-name__wrapper")
+const file = document.querySelector('#file');
+
+
+
+
+
+
+
+
+file.addEventListener('change', (e) => {
+  const [file] = e.target.files;
+   const { name: fileName } = file;
+   fileNameWrapper.classList.add("file-name__wrapper-show")
+ document.querySelector('.file-name').textContent = fileName;
+
+});
+
+fileNameIcon.addEventListener("click", ()=>{
+ fileNameWrapper.classList.remove("file-name__wrapper-show")
+ file.value= '';
+})
+
+
+popupRequisition.addEventListener("click", closePopup);
+popupThanks.addEventListener("click", closePopupThaks);
+popupReviews.addEventListener("click", closePopupReviews);
+
+
+
+
+
+forms.forEach(el => {
+
+  el.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+  });
+});
+
+
+
+
+buttonOpenThanks.addEventListener("click", openPopupThaks);
+// buttonOpenReviews.addEventListener("click", openPopupReviews)
+
+buttonOpen.forEach(el => {
+  el.addEventListener("click", openPopup);
+});
+
+buttonClose.forEach(el => {
+
+  el.addEventListener("click", closePopup);
+});
+
+buttonCloseThanks.addEventListener("click", closePopupThaks);
+
+
+
+
+
+
+function openPopup() {
+  popupRequisition.classList.add("modal_active")
+}
+
+function closePopup(event) {
+  let target = event.target;
+  if (target.classList.contains("popup-requisition-wrapper") || target.classList.contains("icon-close") || target.tagName === "use") {
+    popupRequisition.classList.remove("modal_active")
+  }
+}
+
+function openPopupThaks() {
+  popupRequisition.classList.remove("modal_active")
+  popupThanks.classList.add("modal_active")
+}
+
+function closePopupThaks(event) {
+  let target = event.target;
+  console.log('sdfsdf');
+  if (target.classList.contains("popup-thanks-wrapper") || target.classList.contains("icon-close-thanks") || target.tagName === "use") {
+    popupThanks.classList.remove("modal_active")
+  }
+}
+
+function openPopupReviews() {
+  popupReviews.classList.add("modal_active")
+}
+
+function closePopupReviews(event) {
+  let target = event.target;
+ 
+  if (target.classList.contains("popup-reviews-wrapper") || target.classList.contains("icon-close-reviews") || target.tagName === "use") {
+    popupReviews.classList.remove("modal_active")
+  }
+}
 
 
 
