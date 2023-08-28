@@ -56,7 +56,6 @@ $('#content-services').each(function () {
 let showContent = document.getElementById('showContent');
 let tab = document.querySelectorAll(".tab")
 
-
 tab.forEach(el => {
   if (el.classList.contains('active')) {
     let content = el.querySelector('.hidden').innerHTML;
@@ -64,7 +63,6 @@ tab.forEach(el => {
   }
 
   el.addEventListener("click", () => {
-
     let content = el.querySelector('.hidden').innerHTML;
     showContent.innerHTML = content;
   })
@@ -72,14 +70,84 @@ tab.forEach(el => {
 
 
 
+let buttonOpen = document.querySelectorAll(".button-open");
+let buttonOpenThanks = document.querySelectorAll(".button-open-thaks");
+let buttonOpenReviews = document.querySelectorAll("#button-open-reviews");
+
+let buttonClose = document.querySelector(".icon-close");
+let buttonCloseThanks = document.querySelector(".icon-close-thanks");
+let buttonCloseReviews = document.querySelector(".icon-close-reviews");
+
+let popupRequisition = document.querySelector(".popup-requisition-wrapper");
+let popupThanks = document.querySelector(".popup-thanks-wrapper");
+let popupReviews = document.querySelector(".popup-reviews-wrapper");
+
+let forms = document.querySelectorAll(".form-call")
+let reviewForm = document.querySelector(".popup-reviews__form")
+
+let fileNameIcon = document.querySelector(".file-name__icon")
+let fileNameWrapper = document.querySelector(".file-name__wrapper")
+const file = document.querySelector('#file');
 
 
+file.addEventListener('change', (e) => {
+  const [file] = e.target.files;
+  const { name: fileName } = file;
+  fileNameWrapper.classList.add("file-name__wrapper-show")
+  document.querySelector('.file-name').textContent = fileName;
+
+});
+
+fileNameIcon.addEventListener("click", () => {
+  fileNameWrapper.classList.remove("file-name__wrapper-show")
+  file.value = '';
+})
+
+forms.forEach(el => {
+
+  el.addEventListener('submit', function (event) {
+    event.preventDefault();
+
+  });
+});
 
 
+buttonOpen.forEach(el => {
+  el.addEventListener("click", () => open(popupRequisition));
+});
+buttonOpenReviews.forEach(el => {
+  el.addEventListener("click", () => open(popupReviews));
+});
+buttonOpenThanks.forEach(el => {
+  el.addEventListener("click", openPopupThaks);;
+});
 
+popupRequisition.addEventListener("click", () => close(event, popupRequisition));
+popupThanks.addEventListener("click", () => close(event, popupThanks));
+popupReviews.addEventListener("click", () => close(event, popupReviews));
+buttonClose.addEventListener("click", () => closeIcon(popupRequisition));
+buttonCloseThanks.addEventListener("click", () => closeIcon(popupThanks));
+buttonCloseReviews.addEventListener("click", () => closeIcon(popupReviews));
 
+function openPopupThaks() {
+  popupRequisition.classList.remove("modal_active")
+  popupThanks.classList.add("modal_active")
+}
 
+function open(popup) {
+  popup.classList.add("modal_active")
+}
 
+function close(event, popup) {
+  let target = event.target;
+  if (popup === target) {
+    popup.classList.remove("modal_active")
+  }
+}
+
+function closeIcon( popup) {
+  popup.classList.remove("modal_active")
+}
 
 
 
