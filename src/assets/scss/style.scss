@@ -8,7 +8,7 @@ $lightGray: #F4F4F4;
 $white: #ffff;
 
 
-$cos_bp: 1920px;
+$cos_bp: 1440px;
 $xl-bp: 1024px;
 $sm-bp: 500px;
 
@@ -36,11 +36,13 @@ html {
 ::-webkit-scrollbar {
   width: 0.6rem;
 }
+
 ::-webkit-scrollbar-track {
-  -webkit-box-shadow:0.5rem 0.5rem 0.5rem -0.5rem rgba(34, 60, 80, 0.2) inset;
+  -webkit-box-shadow: 0.5rem 0.5rem 0.5rem -0.5rem rgba(34, 60, 80, 0.2) inset;
   background-color: #f9f9fd;
   border-radius: 1rem;
 }
+
 ::-webkit-scrollbar-thumb {
   border-radius: 1rem;
   background: linear-gradient(180deg, #00c6fb, #005bea);
@@ -49,6 +51,14 @@ html {
 .container {
   margin: 0 auto;
   max-width: 168rem;
+
+  @include breakpoint($sm-bp) {
+    width: 32.9rem;
+  }
+
+  @include breakpoint($xl-bp) {
+    margin: 0 1rem;
+  }
 }
 
 .form-call {
@@ -57,13 +67,19 @@ html {
   flex-wrap: wrap;
 
   p {
-
-    font-size:1.4rem;
+    font-size: 1.4rem;
     font-weight: 400;
     line-height: 1.8rem;
     letter-spacing: 0em;
     text-align: left;
     color: #989898;
+
+    @include breakpoint($sm-bp) {
+
+      font-size: 1.2rem;
+      line-height: 2.2rem;
+    }
+
   }
 }
 
@@ -75,6 +91,12 @@ html {
   padding: 2rem 3rem;
   border-radius: 5rem;
   gap: 1rem;
+  //styleName: Mob/text 2;
+  @include breakpoint($sm-bp) {
+    font-size: 1.4rem;
+  }
+
+
 }
 
 .phone-number {
@@ -105,7 +127,7 @@ html {
   }
 }
 
-.hidden{
+.hidden {
   display: none;
 }
 

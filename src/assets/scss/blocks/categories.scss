@@ -24,6 +24,9 @@
     
     width: 54rem;
     max-height: 81.2rem;
+    @include breakpoint($xl-bp) {
+      max-height: 2000rem;
+     }
   }
 
   .content-services__filter-title {

@@ -10,6 +10,7 @@ $('.accordion').accordion({
   heightStyle: 'content',
   header: '> .accordion-item > .accordion-header',
   active: 0,
+  collapsible: true,
 });
 
 
@@ -49,24 +50,47 @@ $('#content-services').each(function () {
     }, 1000); // Скорость прокрутки
     ths.find('.tab').removeClass('active').eq($(this).index()).addClass('active');
   });
+  ths.find('.accordion-header').click(function () {
+    $('html, body').animate({
+      scrollTop: $(".content-services").offset().top // класс объекта к которому приезжаем
+    }, 1000); // Скорость прокрутки
+  });
 });
 
 
 
 let showContent = document.getElementById('showContent');
 let tab = document.querySelectorAll(".tab")
+const mediaQuery = window.matchMedia('(max-width: 1024px)')
 
-tab.forEach(el => {
-  if (el.classList.contains('active')) {
-    let content = el.querySelector('.hidden').innerHTML;
-    showContent.innerHTML = content;
-  }
 
-  el.addEventListener("click", () => {
-    let content = el.querySelector('.hidden').innerHTML;
-    showContent.innerHTML = content;
+
+
+function handleTabletChange(e) {
+  tab.forEach(el => {
+    if (e.matches) {
+      el.classList.remove('active')
+      el.addEventListener("click", () => {
+        let content = el.querySelector('.hidden').innerHTML;
+        el.closest('.wrapper-tabs').querySelector('.content-services__price-mobile').innerHTML = content;
+      })
+    } else {
+      el.closest('.wrapper-tabs').querySelector('.content-services__price-mobile').innerHTML = '';
+
+      if (el.classList.contains('active')) {
+        let content = el.querySelector('.hidden').innerHTML;
+        showContent.innerHTML = content;
+      }
+
+      el.addEventListener("click", () => {
+        let content = el.querySelector('.hidden').innerHTML;
+        showContent.innerHTML = content;
+      })
+    }
   })
-});
+}
+mediaQuery.addListener(handleTabletChange)
+handleTabletChange(mediaQuery)
 
 
 
@@ -145,7 +169,7 @@ function close(event, popup) {
   }
 }
 
-function closeIcon( popup) {
+function closeIcon(popup) {
   popup.classList.remove("modal_active")
 }
 

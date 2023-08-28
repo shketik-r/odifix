@@ -1,18 +1,22 @@
-.header__main--margin-bootom {
-  margin-bottom: 7.4rem;
-}
-
 
 .header-nav {
   width: 100%;
-  padding: 1.5rem 2rem 0 2rem;
+  padding: 1.5rem 2rem 1.5rem 2rem;
+  margin-top: 3rem;
   border: 0.1rem solid #CDCED2;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-
   position: relative;
+  @include breakpoint($sm-bp) {
+    margin-top: 2rem;
+    flex-direction: column;
+    align-items: flex-start;
+    justify-content: center;
+    
+
+   }
 }
 
 .header-nav__logo {
@@ -20,6 +24,9 @@
 
   img {
     width: 18.8rem;
+    @include breakpoint($sm-bp) {
+      width: 11.5rem;
+     }
   }
 
   p {
@@ -35,17 +42,17 @@
 
 
 .header-nav__menu {
-  // width: 84.5rem;
   font-weight: 400;
   line-height: 3rem;
   letter-spacing: 0em;
   text-align: left;
   display: flex;
-  flex-wrap: wrap;
   align-items: center;
   gap: 3rem;
-  height: 9.2rem;
-
+  // height: 9.2rem;
+  @include breakpoint($xl-bp) {
+    display: none;;
+   }
   a:hover {
 font-weight: 700;
     color: $blue;
@@ -102,7 +109,6 @@ li{
 
 }
 
-/* Links inside the dropdown */
 
 .dropdown-content a {
   font-weight: 700;
@@ -132,6 +138,9 @@ li{
   height: 3.8rem;
   gap: 1rem;
   display: flex;
+  @include breakpoint($sm-bp) {
+ display: none;
+   }
 
   a {
     border: 0.1rem solid $blue;
@@ -151,6 +160,7 @@ li{
 
     svg {
       width: 1.9rem;
+      height: 1.9rem;
     }
   }
 
