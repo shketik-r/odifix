@@ -31,7 +31,8 @@
     transform: scale(1);
     transition: .3s;
   }
-    &>.popup-reviews {
+
+  &>.popup-reviews {
     transform: scale(1);
     transition: .3s;
   }
@@ -54,6 +55,18 @@
   transform: scale(0);
   transition: .3s;
 
+  @include breakpoint($xl-bp) {
+    padding: 2rem;
+    gap: 2rem;
+    width: 35rem;
+  }
+
+
+  @include breakpoint($sm-bp) {
+
+    width: 90%;
+  }
+
 }
 
 
@@ -63,18 +76,28 @@
     line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: center;
+
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+    }
+
   }
 }
 
 
 
 .popup-reviews {
- 
+
   &__form {
-    width: 35.8rem;
+
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @include breakpoint($xl-bp) {
+      gap: 2rem;
+    }
 
     input {
       width: 100%;
@@ -85,12 +108,16 @@
       line-height: 2.9rem;
       letter-spacing: 0em;
       text-align: left;
+
+      @include breakpoint($xl-bp) {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
     }
 
     textarea {
 
       overflow: auto;
-
       resize: none;
       width: 100%;
       height: 14rem;
@@ -102,6 +129,10 @@
       letter-spacing: 0em;
       text-align: left;
 
+      @include breakpoint($xl-bp) {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
     }
 
     textarea::-webkit-scrollbar {
@@ -116,6 +147,10 @@
     input::placeholder {
       color: #000;
       opacity: 1;
+    }
+
+    button {
+      margin: 0;
     }
   }
 }
@@ -137,8 +172,8 @@
 
 }
 
-.file{
- display: none;
+.file {
+  display: none;
 }
 
 .file-input label {
@@ -161,6 +196,12 @@
   letter-spacing: 0em;
   text-align: left;
   color: #000000;
+
+  @include breakpoint($xl-bp) {
+    font-size: 1.4rem;
+    line-height: 2.5rem;
+  }
+
 }
 
 .file-name__wrapper {
@@ -177,6 +218,10 @@
   gap: 1rem;
   align-items: center;
   margin-bottom: 1rem;
+
+  svg {
+    cursor: pointer;
+  }
 }
 
 .file-name__wrapper-show {
@@ -196,6 +241,12 @@ input:focus+label {
   line-height: 4.7rem;
   letter-spacing: 0em;
   text-align: center;
+
+  @include breakpoint($xl-bp) {
+    font-size: 2rem;
+    line-height: 3.6rem;
+  }
+
 }
 
 .popup__icon {
@@ -208,6 +259,7 @@ input:focus+label {
   cursor: pointer;
   width: 1.2rem;
   height: 1.2rem;
+
 }
 
 .popup__text {
@@ -217,5 +269,12 @@ input:focus+label {
   letter-spacing: 0em;
   text-align: left;
   color: #989898;
+
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+  }
+
+
 
 }

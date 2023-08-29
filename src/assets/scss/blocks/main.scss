@@ -702,6 +702,7 @@
 
   @include breakpoint($xl-bp) {
     flex-direction: column;
+    margin-bottom: 10rem;
   }
 
   .content-instruction__wrapper {
@@ -718,12 +719,14 @@
     .button {
       z-index: 1;
       margin-bottom: 0;
+
       @include breakpoint($xl-bp) {
-       width: 39.7rem;
+        width: 39.7rem;
       }
+
       @include breakpoint($sm-bp) {
         width: 100%;
-       }
+      }
     }
 
 
@@ -835,6 +838,10 @@
   position: relative;
   margin-bottom: 17rem;
 
+  @include breakpoint($xl-bp) {
+    margin-bottom: 10rem;
+  }
+
 
   .content-carousel__wrapper {
     margin-bottom: 2.5rem;
@@ -847,6 +854,12 @@
     text-align: left;
     margin-bottom: 10rem;
     text-transform: uppercase;
+
+    @include breakpoint($xl-bp) {
+      font-size: 4.2rem;
+      line-height: 5.5rem;
+      margin-bottom: 2rem;
+    }
   }
 
 
@@ -860,6 +873,12 @@
       display: flex;
       flex-direction: column;
       justify-content: space-between;
+
+      @include breakpoint($xl-bp) {
+        padding: 2rem;
+        width: 29.8rem;
+        height: 37.1rem;
+      }
     }
   }
 
@@ -872,6 +891,10 @@
     right: 0;
     display: flex;
     justify-content: space-between;
+
+    @include breakpoint($xl-bp) {
+      display: none;
+    }
 
     svg {
       width: 0.6rem;
@@ -900,6 +923,11 @@
     align-items: center;
     justify-content: space-between;
     margin-bottom: 1rem;
+
+    @include breakpoint($xl-bp) {
+      justify-content: flex-start;
+      gap: 4rem;
+    }
   }
 
   .owl-carousel__user-name {
@@ -908,6 +936,11 @@
     line-height: 4.6rem;
     letter-spacing: 0em;
     text-align: left;
+
+    @include breakpoint($xl-bp) {
+      font-size: 2rem;
+      line-height: 3.6rem;
+    }
   }
 
   .owl-carousel__text {
@@ -915,14 +948,26 @@
     line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: left;
+    overflow: hidden;
+    text-overflow: ellipsis;
+
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      height: 25rem;
+    }
+
   }
 
   .owl-carousel__user-evaluation {
     svg {
-
-
       width: 2.3rem;
       height: 2.3rem;
+
+      @include breakpoint($xl-bp) {
+        width: 1.3rem;
+        height: 1.2rem;
+      }
     }
   }
 
@@ -932,23 +977,48 @@
     letter-spacing: 0em;
     text-align: left;
     color: $darkGrey;
+
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+    }
+
   }
 
   .content-carousel__btn--center {
-    width: 100%;
+    width: 54rem;
+    margin: 0 auto;
     display: flex;
     justify-content: center;
+
+    @include breakpoint($xl-bp) {
+      width: 39.7rem;
+    }
+
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
+
+
+    a {
+      width: 100%;
+    }
   }
 
   .button--center {
-    width: 54rem;
+    margin: 0;
   }
+
 }
 
 /*-----------*/
 .content-contacts {
   width: 100%;
   margin-bottom: 19.2rem;
+
+  @include breakpoint($xl-bp) {
+    margin-bottom: 10rem;
+  }
 
   .content-contacts__title {
 
@@ -959,6 +1029,12 @@
     text-align: left;
     margin-bottom: 10rem;
     text-transform: uppercase;
+
+    @include breakpoint($xl-bp) {
+      font-size: 4.2rem;
+      line-height: 5.5rem;
+      margin-bottom: 2rem;
+    }
   }
 
   .content-contacts__wrapper {
@@ -967,10 +1043,15 @@
     flex-wrap: wrap;
     justify-content: space-between;
     align-content: flex-start;
+
+    @include breakpoint($xl-bp) {
+      gap: 4rem;
+      flex-direction: column;
+      align-items: flex-start;
+    }
   }
 
   .content-contacts__list {
-    height: 36.4rem;
     width: 39.6rem;
     padding: 2rem;
     border-radius: 1rem;
@@ -980,18 +1061,33 @@
     background: $blue;
     color: $white;
 
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
+
     .content-contacts__list-title {
 
       font-size: 2.6rem;
       line-height: 4.6rem;
       letter-spacing: 0em;
       text-align: left;
+
+      @include breakpoint($xl-bp) {
+        font-size: 2rem;
+        line-height: 3.6rem;
+      }
     }
 
     .content-contacts__list-phone-number {
       line-height: 2.9rem;
       letter-spacing: 0em;
       text-align: left;
+
+      @include breakpoint($xl-bp) {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
+
     }
 
     .content-contacts__list-text {
@@ -1000,6 +1096,11 @@
       line-height: 1.8rem;
       letter-spacing: 0em;
       text-align: left;
+
+      @include breakpoint($xl-bp) {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+      }
     }
   }
 
@@ -1008,13 +1109,19 @@
     width: 82.5rem;
     height: 53.4rem;
     filter: grayscale(1);
-    /* Черно-белый фильтр для изображения */
     transition: 1s;
-    /* Время изменения цвета изображения */
+
+    @include breakpoint($xl-bp) {
+      width: 100%;
+    }
+
+    @include breakpoint($sm-bp) {
+      width: 100%;
+      height: 40.4rem;
+    }
 
     &:hover {
       filter: grayscale(0);
-      /* Цветное изображение при наведении */
     }
   }
 
@@ -1032,6 +1139,11 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include breakpoint($sm-bp) {
+      width: 31.8rem;
+      top: 25rem;
+      left: 0.5rem;
+    }
 
 
 
@@ -1040,6 +1152,11 @@
       font-size: 2.6rem;
       letter-spacing: 0em;
       text-align: left;
+
+      @include breakpoint($xl-bp) {
+        font-size: 2rem;
+        line-height: 3.6rem;
+      }
     }
 
     .content-contacts__map-subtitle {
@@ -1048,16 +1165,23 @@
       letter-spacing: 0em;
       text-align: left;
 
+      @include breakpoint($xl-bp) {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
     }
 
     .content-contacts__map-text {
-
       font-size: 1.4rem;
       font-weight: 400;
       line-height: 1.8rem;
       letter-spacing: 0em;
       text-align: left;
 
+      @include breakpoint($xl-bp) {
+        font-size: 1.2rem;
+        line-height: 2.2rem;
+      }
     }
   }
 
@@ -1067,5 +1191,9 @@
     padding: 2rem;
     border-radius: 1rem;
     border: 1px solid $gray;
+
+    @include breakpoint($xl-bp) {
+      width: 100%;
+    }
   }
 }

@@ -1,20 +1,36 @@
 .reviews {
   margin-top: 5rem;
+
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 
 
 .content-reviews {
   margin-bottom: 20rem;
 
+  @include breakpoint($xl-bp) {
+    margin-bottom: 10rem;
+  }
+
   .content-reviews__header {
     display: flex;
     align-items: center;
     justify-content: space-between;
     margin-bottom: 4rem;
+
+    @include breakpoint($xl-bp) {
+     flex-direction: column;
+    }
   }
 
   .button--width {
     width: 39.7rem;
+    margin: 0;
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
   }
 
   .content-reviews__title {
@@ -23,12 +39,18 @@
     letter-spacing: 0em;
     text-align: left;
 
+    @include breakpoint($xl-bp) {
+      font-size: 4.2rem;
+      line-height: 5.5rem;
+      margin-bottom: 1rem;
+    }
+
   }
 
 
   .content-reviews__elem {
     width: 54rem;
-    height: 33rem;
+    min-height: 33rem;
     padding: 3rem;
     border-radius: 1rem;
     background: $lightGray;
@@ -38,10 +60,8 @@
 
     &:hover,
     &:focus {
-
       box-shadow: 0 0.5em 0.5em -0.4em $darkGrey;
       transform: translateY(-0.25em);
-
     }
   }
 
@@ -51,6 +71,11 @@
     flex-wrap: wrap;
     gap: 3rem;
     margin-bottom: 4rem;
+
+    @include breakpoint($xl-bp) {
+      justify-content: center;
+      gap: 2rem;
+    }
   }
 
   .content-reviews__item-header {
@@ -66,6 +91,11 @@
     line-height: 4.6rem;
     letter-spacing: 0em;
     text-align: left;
+
+    @include breakpoint($sm-bp) {
+      font-size: 2rem;
+      line-height: 3.6rem;
+    }
   }
 
   .content-reviews___text {
@@ -73,12 +103,23 @@
     line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: left;
+
+
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+    }
   }
 
   .content-reviews___evaluation {
     svg {
       width: 2.3rem;
       height: 2.3rem;
+
+      @include breakpoint($sm-bp) {
+        width: 1.3rem;
+        height: 1.3rem;
+      }
     }
   }
 
@@ -98,7 +139,7 @@
 
   .pagination__list {
     display: flex;
-    
+
     gap: 1.5rem;
   }
 
@@ -112,9 +153,11 @@
     text-align: center;
     line-height: 2.9rem;
     letter-spacing: 0em;
-    &:hover{
+
+    &:hover {
       background: $pink;
-      a{
+
+      a {
         color: $white;
       }
     }
@@ -122,7 +165,7 @@
 
     a {
       color: $black;
-      
+
     }
 
   }

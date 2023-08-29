@@ -11,9 +11,8 @@
   position: relative;
   @include breakpoint($sm-bp) {
     margin-top: 2rem;
-    flex-direction: column;
-    align-items: flex-start;
-    justify-content: center;
+    justify-content: space-between;
+    align-items: center;
     
 
    }
@@ -49,7 +48,6 @@
   display: flex;
   align-items: center;
   gap: 3rem;
-  // height: 9.2rem;
   @include breakpoint($xl-bp) {
     display: none;;
    }
@@ -138,7 +136,7 @@ li{
   height: 3.8rem;
   gap: 1rem;
   display: flex;
-  @include breakpoint($sm-bp) {
+  @include breakpoint($xl-bp) {
  display: none;
    }
 
@@ -175,3 +173,6 @@ li{
   }
 
 }
+
+
+/*-----------------------------------------------------*/

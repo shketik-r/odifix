@@ -2,6 +2,10 @@
   margin-top: 5rem;
   width: 100%;
 
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
+
 }
 
 
@@ -14,12 +18,27 @@
   justify-content: space-between;
   margin-bottom: 15rem;
 
+  @include breakpoint($xl-bp) {
+    flex-direction: column;
+    justify-content: normal;
+    align-items: normal;
+    margin-bottom: 10rem;
+  }
+
+
   .buyout-title__title {
     font-size: 8.6rem;
     line-height: 11.1rem;
     text-align: left;
     text-transform: uppercase;
     margin-bottom: 4rem;
+
+    @include breakpoint($xl-bp) {
+      font-size: 4.2rem;
+      line-height: 5.5rem;
+      margin-bottom: 2rem;
+
+    }
   }
 
   .buyout-title__wrapper {
@@ -28,12 +47,25 @@
     flex-direction: column;
     justify-content: space-between;
 
+    @include breakpoint($xl-bp) {
+
+      width: 100%;
+      margin-bottom: 4rem;
+
+    }
+
     p {
       width: 82.5rem;
       font-weight: 400;
       line-height: 2.9rem;
       letter-spacing: 0em;
       text-align: left;
+
+      @include breakpoint($xl-bp) {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
     }
   }
 
@@ -44,21 +76,35 @@
   width: 100%;
   margin-bottom: 20rem;
 
+  @include breakpoint($xl-bp) {
+    margin-bottom: 10rem;
+  }
 
 
 
   .buyout-list__wrapper {
     display: flex;
     justify-content: space-between;
+    gap: 3rem;
+
+    @include breakpoint($xl-bp) {
+      align-items: center;
+      flex-direction: column;
+      gap: 2rem;
+    }
 
     li {
-      width: 54rem;
-      height: 17rem;
       padding: 2rem;
       border-radius: 1rem;
       background: $lightGray;
       display: flex;
       align-items: center;
+      gap: 5rem;
+
+      @include breakpoint($xl-bp) {
+        gap: 1rem;
+        width: 100%;
+      }
 
       &:hover,
       &:focus {
@@ -67,7 +113,9 @@
       }
 
       @keyframes pulse {
-        0% { box-shadow: 0 0 0 0 $lightGray; }
+        0% {
+          box-shadow: 0 0 0 0 $lightGray;
+        }
       }
     }
 
@@ -77,13 +125,23 @@
       letter-spacing: 0em;
       text-align: left;
       color: $blue;
-      margin-right: 5rem;
+
+      @include breakpoint($xl-bp) {
+        font-size: 5rem;
+        line-height: 6.5rem;
+      }
+
     }
 
     .buyout-list-subtitle {
       line-height: 2.9rem;
       letter-spacing: 0em;
       text-align: left;
+
+      @include breakpoint($xl-bp) {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
     }
   }
 }
@@ -94,17 +152,30 @@
   gap: 3rem;
   margin-bottom: 20rem;
 
+  @include breakpoint($xl-bp) {
+    margin-bottom: 10rem;
+    flex-direction: column;
+  }
+
 
   .product-cards__left {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @include breakpoint($xl-bp) {
+      gap: 2rem;
+    }
   }
 
   .product-cards__right {
     display: flex;
     flex-direction: column;
     gap: 3rem;
+
+    @include breakpoint($xl-bp) {
+      gap: 2rem;
+    }
   }
 
   .product-card {
@@ -115,10 +186,24 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+
+    @include breakpoint($xl-bp) {
+      width: 100%;
+      gap: 2rem;
+      flex-direction: column;
+    }
   }
 
+
+
   .product-card__wrapper {
-    // padding: 1rem;
+
+    @include breakpoint($xl-bp) {
+      display: flex;
+      flex-direction: column;
+      width: 100%;
+
+    }
   }
 
   .product-card__title {
@@ -129,6 +214,13 @@
     text-transform: uppercase;
     margin-bottom: 4rem;
 
+    @include breakpoint($xl-bp) {
+      font-size: 3rem;
+      line-height: 3.9rem;
+      margin-bottom: 2rem;
+
+    }
+
   }
 
   .product-card__subtitle {
@@ -136,6 +228,10 @@
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 1rem;
+
+    @include breakpoint($xl-bp) {
+      line-height: 2.8rem;
+    }
   }
 
   .product-card__buttons {
@@ -144,8 +240,11 @@
     flex-wrap: wrap;
     gap: 1rem;
 
-    button {
+    @include breakpoint($xl-bp) {
+      margin-bottom: 2rem;
+    }
 
+    button {
       height: 3.9rem;
       padding: 0.5rem 1.5rem;
       border-radius: 1rem;
@@ -155,6 +254,11 @@
       letter-spacing: 0em;
       text-align: left;
       cursor: pointer;
+
+      @include breakpoint($xl-bp) {
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
 
       &:hover,
       &:focus {
@@ -170,10 +274,20 @@
   img {
     width: 30.1rem;
     height: 31.8rem;
+
+    @include breakpoint($sm-bp) {
+      width: 100%;
+      height: 100%;
+    }
   }
 
   .button--width {
     width: 39.7rem;
+    margin: 0;
+
+    @include breakpoint($sm-bp) {
+      width: 100%;
+    }
   }
 
 }

@@ -51,14 +51,15 @@ html {
 .container {
   margin: 0 auto;
   max-width: 168rem;
-
-  @include breakpoint($sm-bp) {
-    width: 32.9rem;
-  }
-
   @include breakpoint($xl-bp) {
     margin: 0 1rem;
   }
+  @include breakpoint($sm-bp) {
+    margin: 0 auto;
+    width: 32.9rem;
+  }
+
+ 
 }
 
 .form-call {
@@ -75,7 +76,6 @@ html {
     color: #989898;
 
     @include breakpoint($sm-bp) {
-
       font-size: 1.2rem;
       line-height: 2.2rem;
     }
@@ -143,5 +143,6 @@ html {
 @import './blocks/reviews.scss';
 @import './blocks/contacts.scss';
 @import './blocks/popup.scss';
+@import './blocks/menu.scss';
 
 @import './blocks/footer.scss';

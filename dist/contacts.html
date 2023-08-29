@@ -284,10 +284,25 @@
             </a>
             <a class="header-nav__number-phone" href="tel:+74952201106">+7 (495) 220-11-06</a>
           </div>
-        </div>
-      </div>
     
-    </header>
+          <div class="menu-btn">
+            <span></span>
+            <span></span>
+            <span></span>
+          </div>
+    
+        </div>
+    
+    
+      </div>
+      <div class="menu">
+        <ul>
+          <li><a href="#">Главная</a></li>
+          <li><a href="#">О нас</a></li>
+          <li><a href="#">Услуги</a></li>
+          <li><a href="#">Контакты</a></li>
+        </ul>
+      </div></header>
     <!-- Main content -->
     <main>
 
@@ -340,33 +355,49 @@
     </main>
 
     <!-- Footer -->
-    <footer">
-      <div class="container">
-        <div class="footer">
-    
-          <div class="footer__menu">
-            <div class="header-nav__logo">
+    <div class="container">
+      <footer class="footer">
+        <div class="footer-nav">
+          <div class="footer-images">
+            <div class="footer-logo">
               <a href="main.html">
                 <img src="../assets/images/svg/Logo.svg" alt="logo">
                 <p>Ремонт техники Apple</p>
               </a>
             </div>
-            <ul class="footer__list">
-              <li><a href="../categories.html">Ремонт iPhone</a></li>
-              <li><a href="../categories.html">Ремонт iPad</a></li>
-              <li><a href="../categories.html">Ремонт MacBook</a></li>
-              <li><a href="../categories.html">Ремонт iMac</a></li>
-              <li><a href="../buyout.html">Скупка</a></li>
-              <li><a href="../reviews.html">Отзывы</a></li>
-              <li><a href="../contacts.html">Контакты</a></li>
-            </ul>
-    
+            <div class="footer-yandex">
+              <a href="#"><img src="../assets/images/rating.jpg" alt="yandex"></a>
+            </div>
           </div>
-          <div class="footer__contacts">
-            <a href="#"><img src="../assets/images/rating.jpg" class="footer__contacts-rating" alt="rating"></a>
-            <div class="footer__contacts-wrapper">
-              <div class="footer__contacts-icon">
     
+          <div class="footer-nav-menu">
+            <div class="footer-menu">
+              <ul>
+                <a href="#">
+                  <li>Ремонт iPhone</li>
+                </a>
+                <a href="#">
+                  <li>Ремонт iPad</li>
+                </a>
+                <a href="#">
+                  <li>Ремонт MacBook</li>
+                </a>
+                <a href="#">
+                  <li>Ремонт iMac</li>
+                </a>
+                <a href="#">
+                  <li>Скупка</li>
+                </a>
+                <a href="#">
+                  <li>Отзывы</li>
+                </a>
+                <a href="#">
+                  <li>Контакты</li>
+                </a>
+              </ul>
+            </div>
+            <div class="footer-networks">
+              <div class="footer-icon-wrapper">
     
                 <a href="#">
                   <svg>
@@ -380,106 +411,114 @@
                 </a>
               </div>
     
-              <div class="footer__contacts-phone-number">
-                <a href="tel:+74952201106">
+              <div class="footer-number-phone-wrapper">
+                <a href="#">
                   <svg>
                     <use href="#icon-phone"></use>
                   </svg>
                   <p>+7 (495) 220-11-06</p>
                 </a>
               </div>
-              <p class="footer__contacts-adress">Одинцово, ул. Маршала Неделина, 2А</p>
+              <p>Одинцово, ул. Маршала Неделина, 2А</p>
             </div>
           </div>
     
-          <div class="footer__down">
-            <p>Разработка сайта: <a href="https://bydesign.by/" target="_blank">“Студия ЯР”</a></p>
-            <p>Информация на сайте не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. Сервисный центр
-              OdiFix является постгарантийным (неавторизованным) сервисным центром. © 2023 uWeb</p>
-          </div>
         </div>
-      </div>
+        <div class="footer-info">
+          <p>Разработка сайта: <a href="https://bydesign.by/">“Студия ЯР”</a></p>
+          <p>Информация на сайте не является публичной офертой, определяемой положениями Статьи 437 ГК РФ. Сервисный центр
+            OdiFix является постгарантийным (неавторизованным) сервисным центром. © 2023 uWeb</p>
+        </div>
       </footer>
+    
+    </div>
   </div>
 
   <!-- popup -->
-  <div class="popup-requisition-wrapper">
-    <div class="popup-requisition">
-      <svg class=" popup__icon icon-close">
-        <use href="#icon-close"></use>
-      </svg>
-      <p class="popup__title">Оставить заявку</p>
-      <form class="form-call">
-        <input type="text" class="phone-number" id="phoneMaskHeader" placeholder="+7 (__) __-__-__">
-        <button class="button button-open-thaks" type="submit">Записаться на ремонт</button>
-        <p>Отправляя заявку, Вы даете согласие с политикой конфиденциальности согласно Федерального закона №152-ФЗ</p>
-      </form>
+
+
+    
+    
+    
+    <div class="popup-requisition-wrapper">
+      <div class="popup-requisition">
+        <svg class=" popup__icon icon-close">
+          <use href="#icon-close"></use>
+        </svg>
+        <p class="popup__title">Оставить заявку</p>
+        <form class="form-call">
+          <input type="text" class="phone-number" id="phoneMaskHeader" placeholder="+7 (__) __-__-__">
+          <button class="button button-open-thaks" type="submit">Записаться на ремонт</button>
+          <p>Отправляя заявку, Вы даете согласие с политикой конфиденциальности согласно Федерального закона №152-ФЗ</p>
+        </form>
+      </div>
     </div>
-  </div>
-  
-  
-  
-  <div class="popup-thanks-wrapper">
-    <div class="popup-thanks">
-      <svg class=" popup__icon icon-close-thanks">
-        <use href="#icon-close"></use>
-      </svg>
-      <p class="popup__title">Спасибо за заявку</p>
-      <p class="popup-thanks__text">Ваша заявка! Наши менеджеры свяжутся с вами в ближайшее время</p>
+    
+    
+    
+    <div class="popup-thanks-wrapper">
+      <div class="popup-thanks">
+        <svg class=" popup__icon icon-close-thanks">
+          <use href="#icon-close"></use>
+        </svg>
+        <p class="popup__title">Спасибо за заявку</p>
+        <p class="popup-thanks__text">Ваша заявка! Наши менеджеры свяжутся с вами в ближайшее время</p>
+      </div>
     </div>
-  </div>
-  
-  
-  
-  
-  <div class="popup-reviews-wrapper">
-  
-    <div class="popup-reviews">
-  
-      <svg class="popup__icon icon-close-reviews">
-        <use href="#icon-close"></use>
-      </svg>
-      
-      <p class="popup__title">Добавить отзыв</p>
-  
-      <form action="#" class="popup-reviews__form">
-        <input type="text" placeholder="Ваше имя">
-        <textarea placeholder="Ваш отзыв"></textarea>
-        <div class="file-input">
-          <input type="file" id="file" class="file" accept="image/png, image/jpeg">
-          <label for="file">
-            <div class="file-input__wrapper">
-              <div class="file-input__icon">
-                <svg>
-                  <use href="#icon-add"></use>
-                </svg>
+    
+    
+    
+    
+    <div class="popup-reviews-wrapper">
+    
+      <div class="popup-reviews">
+    
+        <svg class="popup__icon icon-close-reviews">
+          <use href="#icon-close"></use>
+        </svg>
+        
+        <p class="popup__title">Добавить отзыв</p>
+    
+        <form action="#" class="popup-reviews__form">
+          <input type="text" placeholder="Ваше имя">
+          <textarea placeholder="Ваш отзыв"></textarea>
+          <div class="file-input">
+            <input type="file" id="file" class="file" accept="image/png, image/jpeg">
+            <label for="file">
+              <div class="file-input__wrapper">
+                <div class="file-input__icon">
+                  <svg>
+                    <use href="#icon-add"></use>
+                  </svg>
+                </div>
+                <span>Добавить фото</span>
               </div>
-              <span>Добавить фото</span>
+            </label>
+            <div class="file-name__wrapper">
+              <div class="file-name--flex">
+                <svg class="file-name__icon">
+                  <use href="#icon-close"></use>
+                </svg>
+                <p class="file-name"></p>
+              </div>
+    
+              <p class="popup__text">Допускаются только JPEG, PNG форматы изображения</p>
             </div>
-          </label>
-          <div class="file-name__wrapper">
-            <div class="file-name--flex">
-              <svg class="file-name__icon">
-                <use href="#icon-close"></use>
-              </svg>
-              <p class="file-name"></p>
-            </div>
-  
-            <p class="popup__text">Допускаются только JPEG, PNG форматы изображения</p>
           </div>
-        </div>
-        <button class="button">Добавить отзыв</button>
-      </form>
-  
-      <p class="popup__text">Отправляя заявку, Вы даете согласие с политикой конфиденциальности согласно Федерального
-        закона №152-ФЗ</p>
-  
+          <button class="button">Добавить отзыв</button>
+        </form>
+    
+        <p class="popup__text">Отправляя заявку, Вы даете согласие с политикой конфиденциальности согласно Федерального
+          закона №152-ФЗ</p>
+    
+      </div>
+    
     </div>
-  
-  </div>
-  
-  
-  
+    
+    
+    
+
+ 
 
   <!-- JS -->
   <script src="https://cdnjs.cloudflare.com/ajax/libs/gsap/3.12.2/gsap.min.js"></script>

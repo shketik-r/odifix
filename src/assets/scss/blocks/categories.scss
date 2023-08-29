@@ -1,93 +1,399 @@
-
-
 .categories {
   margin-top: 5rem;
+
+  @include breakpoint($xl-bp) {
+    margin-top: 2rem;
+  }
 }
 
 .breadcrumbs {
-
   font-weight: 400;
   line-height: 1.8rem;
   letter-spacing: 0em;
   text-align: left;
+  margin-bottom: 4rem;
+
+  @include breakpoint($xl-bp) {
+    font-size: 1.2rem;
+    line-height: 2.2rem;
+    margin-bottom: 2rem;
+  }
 
   span {
     color: $blue;
   }
 
-  margin-bottom: 4rem;
+
 }
 
-.content-services {
+.content-services {}
 
-  .content-services__filter {
-    
-    width: 54rem;
-    max-height: 81.2rem;
-    @include breakpoint($xl-bp) {
-      max-height: 2000rem;
-     }
+.repair {
+  width: 100%;
+  margin-bottom: 7rem;
+
+  @include breakpoint($xl-bp) {
+    margin-bottom: 5rem;
   }
 
-  .content-services__filter-title {
+  .repair__top {
+    margin-bottom: 7rem;
+    display: flex;
+    justify-content: space-between;
+
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      margin-bottom: 5rem;
+      gap: 4rem;
+    }
+  }
+
+  .repair__top-left {
+    width: 82.5rem;
+
+    @include breakpoint($xl-bp) {
+      width: 100%;
+    }
+  }
+
+  .repair__title {
+    font-size: 8.6rem;
+    line-height: 11.1rem;
+    letter-spacing: 0;
+    text-align: left;
+    margin-bottom: 4rem;
+    text-transform: uppercase;
+
+    @include breakpoint($xl-bp) {
+      font-size: 4.2rem;
+      line-height: 5.5rem;
+      margin-bottom: 2rem;
+    }
+
+
+  }
+
+  .repair__subtitle {
+    font-weight: 400;
+    line-height: 2.9rem;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+    }
+
+  }
+
+  .repair__top-list {
+    width: 82.6rem;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 3rem;
+
+    @include breakpoint($xl-bp) {
+      width: 100%;
+      gap: 2rem;
+    }
+
+    .repair__top-item {
+      width: 39.8rem;
+      height: 12rem;
+      padding: 2rem;
+      border-radius: 1rem;
+      border: 0.1rem solid #CDCED2;
+      line-height: 2.9rem;
+      letter-spacing: 0em;
+      text-align: left;
+      display: flex;
+      align-items: center;
+
+      @include breakpoint($xl-bp) {
+        width: 100%;
+        font-size: 1.4rem;
+        line-height: 2.5rem;
+      }
+
+    }
+
+    .repair__top-item--border {
+      width: 39.8rem;
+      height: 12rem;
+      padding: 0;
+      border: none;
+      display: flex;
+      align-items: flex-end;
+
+
+      @include breakpoint($xl-bp) {
+        width: 100%;
+        height: 100%;
+      }
+
+      .button {
+        margin: 0;
+
+        @include breakpoint($xl-bp) {
+          width: 39.7rem;
+        }
+
+        @include breakpoint($sm-bp) {
+          width: 100%;
+        }
+      }
+    }
+
+
+  }
+
+}
+
+.repair__bottom {
+  margin-bottom: 20rem;
+  width: 100%;
+  background: #F4F4F4;
+  display: flex;
+  justify-content: center;
+  padding: 5rem 0;
+
+
+  @include breakpoint($xl-bp) {
+    justify-content: center;
+    margin-bottom: 10rem;
+  }
+
+
+
+
+  .repair__bottom--position {
+    display: flex;
+    gap: 20rem;
+
+    @include breakpoint($xl-bp) {
+      flex-direction: column;
+      gap: 4rem;
+
+    }
+  }
+
+
+  .repair__bottom-item {
+
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    gap: 4rem;
+
+    @include breakpoint($xl-bp) {
+      width: 100%;
+      justify-content: normal;
+      gap: 2rem;
+    }
+
+
+
+  }
+
+  svg {
+    width: 6rem;
+    height: 6rem;
+
+    @include breakpoint($xl-bp) {
+      width: 5rem;
+    }
+
+  }
+
+
+  .item__wrapper {
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    font-size: 2.6rem;
+    line-height: 4.7rem;
+    letter-spacing: 0em;
+    text-align: left;
+
+    @include breakpoint($xl-bp) {
+      font-size: 2rem;
+      line-height: 3.6rem;
+    }
+  }
+
+
+  .item__price {
+
+    color: $pink;
+  }
+}
+
+.content-services__filter {
+
+  width: 54rem;
+  max-height: 81.2rem;
+
+  @include breakpoint($xl-bp) {
+    max-height: 2000rem;
+  }
+}
+
+.content-services__filter-title {
+  font-weight: 400;
+  line-height: 2.9rem;
+  letter-spacing: 0em;
+  text-align: left;
+  margin-bottom: 3rem;
+}
+
+.content-services-list {
+  display: flex;
+  gap: 1rem;
+  flex-wrap: wrap;
+  margin-bottom: 10rem;
+
+  @include breakpoint($xl-bp) {
+    margin-bottom: 2rem;
+    gap: 2rem;
+  }
+
+  li {
+    font-size: 2.6rem;
+    line-height: 4.7rem;
+    letter-spacing: 0em;
+    text-align: left;
+    min-height: 2.9rem;
+    position: relative;
+    cursor: pointer;
+    padding-top: 0.4rem;
+    margin-right: 1.9rem;
+
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      margin: 0;
+
+    }
+
+
+    &::before {
+      content: '';
+      position: absolute;
+      left: 0;
+      bottom: -0.4rem;
+      width: 0;
+      height: 0.2em;
+      background-color: #4E42AE;
+    }
+
+  }
+
+  li:hover {
+    color: #4E42AE;
+    padding: 0;
+
+    &::before {
+      width: 100%;
+      transition: width 0.35s;
+    }
+  }
+
+  .active {
+    color: #4E42AE;
+    padding: 0;
+
+    &::before {
+      width: 100%;
+      transition: width 0.35s;
+    }
+  }
+}
+
+.content-services__price-mobile {
+  margin-bottom: 5rem;
+}
+
+
+
+.service-center {
+  width: 100%;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20rem;
+
+  @include breakpoint($xl-bp) {
+    margin-bottom: 10rem;
+    flex-direction: column;
+  }
+
+  .service-center__wrapper {
+    width: 96.8rem;
+
+    @include breakpoint($xl-bp) {
+      width: 100%;
+    }
+  }
+
+  .service-center__title {
+    font-size: 4.3rem;
+    line-height: 5.6rem;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 3rem;
+    text-transform: uppercase;
+
+    @include breakpoint($xl-bp) {
+      font-size: 3rem;
+      line-height: 3.9rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .service-center__subtitle {
+    font-size: 2.6rem;
+    line-height: 4.7rem;
+    letter-spacing: 0em;
+    text-align: left;
+    margin-bottom: 3rem;
+
+    @include breakpoint($xl-bp) {
+      font-size: 2rem;
+      line-height: 3.6rem;
+      margin-bottom: 2rem;
+    }
+  }
+
+  .service-center__text-top {
     font-weight: 400;
     line-height: 2.9rem;
     letter-spacing: 0em;
     text-align: left;
     margin-bottom: 3rem;
-  }
 
-  .content-services-list {
-    display: flex;
-    gap: 1rem;
-    flex-wrap: wrap;
-    margin-bottom: 10rem;
-
-    li {
-      font-size: 2.6rem;
-      line-height: 4.7rem;
-      letter-spacing: 0em;
-      text-align: left;
-      min-height: 2.9rem;
-      position: relative;
-      cursor: pointer;
-      padding-top: 0.4rem;
-      margin-right: 1.9rem;
-
-      &::before {
-        content: '';
-        position: absolute;
-        left: 0;
-        bottom: -0.4rem;
-        width: 0;
-        height: 0.2em;
-        background-color: #4E42AE;
-      }
-
-    }
-
-    li:hover {
-      color: #4E42AE;
-      padding: 0;
-
-      &::before {
-        width: 100%;
-        transition: width 0.35s;
-      }
-    }
-
-    .active {
-      color: #4E42AE;
-      padding: 0;
-
-      &::before {
-        width: 100%;
-        transition: width 0.35s;
-      }
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
     }
   }
 
+  .service-center__text-bottom {
+    font-weight: 400;
+    line-height: 2.9rem;
+    letter-spacing: 0em;
+    text-align: left;
 
+    @include breakpoint($xl-bp) {
+      font-size: 1.4rem;
+      line-height: 2.5rem;
+      margin-bottom: 2rem;
+    }
+  }
 
+  .service-center__image {
+    width: 60.5rem;
+    @include breakpoint($xl-bp) {
+      width: 100%;
+    }
+  }
 }
-
