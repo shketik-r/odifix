@@ -1,3 +1,5 @@
+@charset "UTF-8";
+
 html {
     box-sizing: border-box;
     font-size: 0.5208333333vw;
@@ -205,12 +207,10 @@ a {
 @media (max-width: 500px) {
     .header-nav {
         margin-top: 2rem;
-        -ms-flex-direction: column;
-        flex-direction: column;
-        -ms-flex-align: start;
-        align-items: flex-start;
-        -ms-flex-pack: center;
-        justify-content: center;
+        -ms-flex-pack: justify;
+        justify-content: space-between;
+        -ms-flex-align: center;
+        align-items: center;
     }
 }
 
@@ -324,7 +324,7 @@ a {
     display: flex;
 }
 
-@media (max-width: 500px) {
+@media (max-width: 1024px) {
     .header-nav__contacts {
         display: none;
     }
@@ -363,6 +363,7 @@ a {
     padding: 1rem 2rem;
 }
 
+/*-----------------------------------------------------*/
 .main {
     margin-top: 7.4rem;
 }
@@ -3061,6 +3062,76 @@ input:focus + label {
         font-size: 1.2rem;
         line-height: 2.2rem;
     }
+}
+
+.menu-btn {
+    width: 30px;
+    height: 30px;
+    position: relative;
+    z-index: 2;
+    overflow: hidden;
+}
+
+.menu-btn span {
+    width: 30px;
+    height: 2px;
+    position: absolute;
+    top: 50%;
+    left: 50%;
+    -webkit-transform: translate(-50%, -50%);
+    transform: translate(-50%, -50%);
+    background-color: #222222;
+    transition: all 0.5s;
+}
+
+.menu-btn span:nth-of-type(2) {
+    top: calc(50% - 5px);
+}
+
+.menu-btn span:nth-of-type(3) {
+    top: calc(50% + 5px);
+}
+
+.menu {
+    position: absolute;
+    top: 15.6rem;
+    left: 0;
+    width: 100%;
+    height: 100vh;
+    padding: 15px;
+    background: #fff;
+    -webkit-transform: translateY(-100%);
+    transform: translateY(-100%);
+    transition: -webkit-transform 0.5s;
+    transition: transform 0.5s;
+    transition: transform 0.5s, -webkit-transform 0.5s;
+    overflow: hidden;
+}
+
+.menu.active {
+    -webkit-transform: translateX(0);
+    transform: translateX(0);
+}
+
+.menu li {
+    list-style-type: none;
+}
+
+/* Меняем гамбургер иконку, когда меню открыто */
+.menu-btn.active span:nth-of-type(1) {
+    display: none;
+}
+
+.menu-btn.active span:nth-of-type(2) {
+    top: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(45deg);
+    transform: translate(-50%, 0%) rotate(45deg);
+}
+
+.menu-btn.active span:nth-of-type(3) {
+    top: 50%;
+    -webkit-transform: translate(-50%, 0%) rotate(-45deg);
+    transform: translate(-50%, 0%) rotate(-45deg);
 }
 
 .footer {
