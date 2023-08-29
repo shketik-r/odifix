@@ -15,22 +15,23 @@ $('.accordion').accordion({
 
 
 $(function () {
-  // Owl Carousel
-  var owl = $(".owl-carousel");
+  let owl = $(".owl-carousel");
   owl.owlCarousel({
+
     items: 3,
-    margin: 10,
+    // margin: 10,
     loop: true,
     responsive: {
       0: {
         items: 1
       },
-      768: {
+      500: {
         items: 2
       },
-      1180: {
+      1024: {
         items: 3
-      }
+      },
+
     }
   });
   $(".next_button").click(function () {
@@ -52,8 +53,8 @@ $('#content-services').each(function () {
   });
   ths.find('.accordion-header').click(function () {
     $('html, body').animate({
-      scrollTop: $(".content-services").offset().top // класс объекта к которому приезжаем
-    }, 1000); // Скорость прокрутки
+      scrollTop: $(".content-services").offset().top
+    }, 1000);
   });
 });
 
@@ -68,9 +69,11 @@ const mediaQuery = window.matchMedia('(max-width: 1024px)')
 
 function handleTabletChange(e) {
   tab.forEach(el => {
+    
     if (e.matches) {
       el.classList.remove('active')
       el.addEventListener("click", () => {
+      
         let content = el.querySelector('.hidden').innerHTML;
         el.closest('.wrapper-tabs').querySelector('.content-services__price-mobile').innerHTML = content;
       })
@@ -81,9 +84,8 @@ function handleTabletChange(e) {
         let content = el.querySelector('.hidden').innerHTML;
         showContent.innerHTML = content;
       }
-
       el.addEventListener("click", () => {
-        let content = el.querySelector('.hidden').innerHTML;
+         let content = el.querySelector('.hidden').innerHTML;
         showContent.innerHTML = content;
       })
     }
