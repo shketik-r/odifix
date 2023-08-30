@@ -78,7 +78,7 @@ function handleTabletChange(e) {
   console.log(e);
   if (e.matches) {
     tab.forEach(el => {
-           el.classList.remove('active')
+      el.classList.remove('active')
       el.addEventListener("click", () => {
         let content = el.querySelector('.hidden').innerHTML;
         el.closest('.wrapper-tabs').querySelector('.content-services__price-mobile').innerHTML = content;
@@ -200,17 +200,37 @@ $(document).ready(function () {
 
 window.onscroll = function () { myFunction() };
 let header = document.querySelector(".header");
+let headerNav = document.querySelector(".header-nav");
+
 let sticky = header.offsetTop;
 function myFunction() {
   if (window.pageYOffset >= sticky) {
     header.classList.add("header--sticky");
+    headerNav.classList.add("header--padding");
   } else {
     header.classList.remove("header--sticky");
+    headerNav.classList.remove("header--padding");
   }
 }
 
 
+function onEntry(entry) {
+  entry.forEach(change => {
+    if (change.isIntersecting) {
+      change.target.classList.add('element-show');
+    }
+  });
+}
 
+let options = {
+  threshold: [0.5]
+};
+let observer = new IntersectionObserver(onEntry, options);
+let elements = document.querySelectorAll('.element-animation-title');
+
+for (let elm of elements) {
+  observer.observe(elm);
+}
 
 
 

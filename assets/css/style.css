@@ -189,25 +189,14 @@ a {
 
 header {
     margin-top: 3rem;
+    margin-bottom: 3rem;
+    transition: 0.3s;
 }
 
 @media (max-width: 1024px) {
     header {
         margin-top: 0;
     }
-}
-
-.header--sticky {
-    position: fixed;
-    top: 0;
-    width: 100%;
-    background: #fff;
-    z-index: 11;
-    margin-top: 0rem;
-}
-
-.header--sticky + .content {
-    padding-top: 12rem;
 }
 
 .header-nav {
@@ -223,6 +212,7 @@ header {
     justify-content: space-between;
     position: relative;
     z-index: 6;
+    transition: 0.5s;
 }
 
 @media (max-width: 500px) {
@@ -236,6 +226,7 @@ header {
 
 .header-nav__logo {
     text-align: center;
+    transition: 0.5s;
 }
 
 .header-nav__logo img {
@@ -406,13 +397,51 @@ header {
 }
 
 /*-----------------------------------------------------*/
-.content {
-    margin-top: 7.2rem;
+.header--sticky {
+    position: fixed;
+    top: 0;
+    width: 100%;
+    background: #fff;
+    z-index: 11;
+    margin-top: 0rem;
+    margin-bottom: 0rem;
+    transition: 0.3s;
+}
+
+.header--sticky + .content {
+    padding-top: 20rem;
 }
 
 @media (max-width: 1024px) {
-    .content {
-        margin-top: 2rem;
+    .header--sticky + .content {
+        padding-top: 14rem;
+    }
+}
+
+.header--padding {
+    padding: 0 2rem;
+    transition: 0.5s;
+}
+
+.header--padding .header-nav__logo img {
+    width: 13rem;
+}
+
+.header--padding .header-nav__logo p {
+    display: none;
+}
+
+.header--padding .dropbtn {
+    height: 5.5rem;
+}
+
+@media (max-width: 1024px) {
+    .header--padding {
+        padding: 1rem;
+    }
+
+    .header--padding .header-nav__logo img {
+        width: 10rem;
     }
 }
 
@@ -1782,6 +1811,20 @@ header {
     }
 }
 
+/*-------element-animation-title------------------*/
+.element-animation-title {
+    opacity: 0;
+    -webkit-transform: translateY(100%);
+    transform: translateY(100%);
+}
+
+.element-animation-title.element-show {
+    opacity: 1;
+    transition: all 1s;
+    -webkit-transform: translateY(0%);
+    transform: translateY(0%);
+}
+
 .categories {
     margin-top: 5rem;
 }
@@ -2995,7 +3038,7 @@ header {
 }
 
 .file {
-    display: none;
+    visibility: hidden;
 }
 
 .file-input label {
