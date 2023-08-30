@@ -3037,10 +3037,6 @@ header {
     height: 1.6rem;
 }
 
-.file {
-    visibility: hidden;
-}
-
 .file-input label {
     display: block;
     width: 15.6rem;
