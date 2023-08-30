@@ -201,6 +201,7 @@ header {
 }
 
 .header-nav {
+    background: #fff;
     width: 100%;
     padding: 1.5rem 2rem 1.5rem 2rem;
     border: 0.1rem solid #CDCED2;
@@ -1815,8 +1816,8 @@ header {
 /*-------element-animation-title------------------*/
 .element-animation-title {
     opacity: 0;
-    -webkit-transform: translateY(100%);
-    transform: translateY(100%);
+    -webkit-transform: translateY(-50%);
+    transform: translateY(-50%);
 }
 
 .element-animation-title.element-show {
@@ -3236,6 +3237,7 @@ input:focus + label {
     overflow: auto;
     -ms-overflow-style: none;
     scrollbar-width: none;
+    margin-bottom: 12rem;
 }
 
 .header__menu::-webkit-scrollbar {
@@ -3260,6 +3262,7 @@ input:focus + label {
     display: -ms-flexbox;
     display: flex;
     height: 100vh;
+    margin-bottom: 10rem;
     -ms-flex-direction: column;
     flex-direction: column;
     gap: 5rem;
