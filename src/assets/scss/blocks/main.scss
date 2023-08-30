@@ -1,10 +1,10 @@
-.main {
-  margin-top: 7.4rem;
+// .content {
+//   margin-top: 7.2rem;
 
-  @include breakpoint($xl-bp) {
-    margin-top: 2rem;
-  }
-}
+//   @include breakpoint($xl-bp) {
+//     margin-top: 2rem;
+//   }
+// }
 
 /*---------*/
 .header-title {
@@ -1196,4 +1196,17 @@
       width: 100%;
     }
   }
+}
+
+/*-------element-animation-title------------------*/
+
+.element-animation-title{
+  opacity: 0;
+  transform: translateY(-50%);
+}
+
+.element-animation-title.element-show {
+  opacity: 1;
+  transition: all 1s;
+  transform: translateY(0%);
 }

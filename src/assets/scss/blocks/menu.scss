@@ -1,57 +1,241 @@
-.menu-btn {
-	width: 30px;
-	height: 30px;
-	position: relative;
-	z-index:2;
-	overflow: hidden;
+.menu-burger__header {
+  display: none;
+
+  @include breakpoint($xl-bp) {
+    position: relative;
+    width: 2rem;
+    height: 2rem;
+    display: block;
+  }
 }
-.menu-btn span {
-	width: 30px;
-	height: 2px;
-	position: absolute;
-	top: 50%;
-	left: 50%;
-	transform: translate(-50%, -50%);
-	background-color: #222222;
-	transition: all 0.5s;
+
+.menu-burger__header span,
+.menu-burger__header:after,
+.menu-burger__header:before {
+  height: 0.3rem;
+  width: 100%;
+  position: absolute;
+  background: #000;
+  margin: 0 auto;
 }
-.menu-btn span:nth-of-type(2) {
-	top: calc(50% - 5px);
+
+.menu-burger__header span {
+  top: 45%;
+  transition: 0.5s;
 }
-.menu-btn span:nth-of-type(3) {
-	top: calc(50% + 5px);
+
+.menu-burger__header:after,
+.menu-burger__header:before {
+  content: '';
+  transition: 0.4s;
+}
+
+.menu-burger__header:after {
+  bottom: 0rem;
+
+}
+
+.menu-burger__header:before {
+  top: 0rem;
+}
+
+.menu-burger__header.open-menu span {
+  opacity: 0;
+  transition: 0.5s;
+}
+
+.menu-burger__header.open-menu:before {
+  transform: rotate(45deg);
+  top: 0.6rem;
+  transition: 0.4s;
+}
+
+.menu-burger__header.open-menu:after {
+  transform: rotate(-45deg);
+  bottom: 1.1rem;
+  transition: 0.4s;
+}
+
+.header__nav {
+  display: none;
+
+  @include breakpoint($xl-bp) {
+    display: block;
+    position: absolute;
+    top: 0rem;
+    padding-top: 10rem;
+    z-index: 5;
+    background: #fff;
+    box-shadow: #ccc;
+    width: 100%;
+    height: 100vh;
+  
+    box-shadow: 0 4px 2px -2px rgba(36, 36, 36, 0.17);
+    left: -100%;
+    transition: all 0.4s ease;
+  }
 }
 
 
+.header__menu {
+  overflow: auto;
+  -ms-overflow-style: none;
+  scrollbar-width: none;
+  margin-bottom: 12rem;
+}
 
-.menu {
-	position: absolute;
-	top: 15.6rem;
-	left: 0;
-	width: 100%;
-	height: 100vh;
-	padding: 15px;
-  background: #fff;
-	transform: translateY(-100%);
-	transition: transform 0.5s; 
+.header__menu::-webkit-scrollbar {
+  width: 0;
+  height: 0;
+}
+
+.header__menu li {
+  margin: 4rem 4rem 0 3.3rem;
+  font-size: 1.4rem;
+}
+
+.header__nav.open-menu {
+  left: 0;
+}
+
+.fixed-page {
   overflow: hidden;
 }
-.menu.active {
-	transform: translateX(0);
-}
-.menu li {
-	list-style-type: none;
+
+.menu-mobile-wrapper {
+  display: flex;
+  height: 100vh;
+  margin-bottom: 10rem;
+  flex-direction: column;
+  gap: 5rem;
+  margin-top: 2rem;
 }
 
-/* Меняем гамбургер иконку, когда меню открыто */
-.menu-btn.active span:nth-of-type(1) {
+.show-contacts {
   display: none;
+
+  @include breakpoint($sm-bp) {
+    display: flex;
+  }
 }
-.menu-btn.active span:nth-of-type(2) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(45deg);  
+
+.menu {
+  width: 80%;
+   font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+  flex-direction: column;
+  gap: 2rem;
+
+  @include breakpoint($sm-bp) {
+    width: 100%;
+
+  }
+
+  li {
+    margin: 0;
+
+  }
+
 }
-.menu-btn.active span:nth-of-type(3) {
-  top: 50%;
-  transform: translate(-50%, 0%) rotate(-45deg); 
+
+
+
+.iPhone-list,
+.iPad-list,
+.MacBook-list {
+  columns: 3;
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 700;
+
+  li {
+    margin-bottom: 1rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+
+
+      transform: translateY(-0.25em);
+
+    }
+  }
+
+  @include breakpoint($sm-bp) {
+    columns: 2;
+  }
+}
+
+.iMac-list {
+  margin-bottom: 1rem;
+  margin-top: 1rem;
+  font-weight: 700;
+
+  li {
+    margin-bottom: 1rem;
+    font-size: 1.1rem;
+
+    &:hover,
+    &:focus,
+    &:active {
+      color: $blue;
+      transform: translateY(-0.25em);
+    }
+  }
+}
+
+
+.accordion-header-menu {
+  font-size: 1.4rem;
+  font-weight: 400;
+  line-height: 2.5rem;
+  letter-spacing: 0em;
+  text-align: left;
+  display: flex;
+  flex-direction: row-reverse;
+  justify-content: space-between;
+  align-items: center;
+  cursor: pointer;
+  border-bottom: 0.1rem solid #cdced2;
+  padding-bottom: 0.5rem;
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue;
+
+    font-weight: 700;
+  }
+
+  @include breakpoint($sm-bp) {
+    border-bottom: 0;
+    padding-bottom: 0;
+  }
+}
+
+.header-menu {
+
+  &:hover,
+  &:focus,
+  &:active {
+    color: $blue;
+
+    font-weight: 700;
+  }
+}
+
+
+.menu .ui-accordion-header-icon {
+  width: 1rem;
+  height: 1rem;
+  background: url(../images/svg/icon_down-menu.svg) 50% 50% no-repeat;
+}
+
+.menu .ui-accordion-header-active .ui-accordion-header-icon {
+  background: url(../images/svg/icon_up-menu.svg) 50% 50% no-repeat;
 }
