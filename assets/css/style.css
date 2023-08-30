@@ -195,7 +195,8 @@ header {
 
 @media (max-width: 1024px) {
     header {
-        margin-top: 0;
+        margin-top: 2rem;
+        margin-bottom: 2rem;
     }
 }
 
@@ -3035,6 +3036,10 @@ header {
 .file-input__wrapper svg {
     width: 1.6rem;
     height: 1.6rem;
+}
+
+.file {
+    display: none;
 }
 
 .file-input label {
