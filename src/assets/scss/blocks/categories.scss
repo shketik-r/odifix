@@ -228,16 +228,6 @@
   }
 }
 
-.content-services__filter {
-
-  width: 54rem;
-  max-height: 81.2rem;
-
-  @include breakpoint($xl-bp) {
-    max-height: 2000rem;
-  }
-}
-
 .content-services__filter-title {
   font-weight: 400;
   line-height: 2.9rem;

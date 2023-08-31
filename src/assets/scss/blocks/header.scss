@@ -95,35 +95,35 @@ header {
 .dropdown {
   float: left;
   overflow: hidden;
-
 }
 
 .dropbtn {
   height: 9.2rem;
   background: #fff;
   cursor: pointer;
-
 }
 
 .navbar a:hover,
 .dropdown:hover .dropbtn {
   color: $blue;
   font-weight: 700;
-
 }
 
 
 .dropdown-content {
   position: absolute;
   top: 100%;
+  border: 1px solid #CDCED2;
+  border-radius: 0 0 1rem 1rem;
+  border-top: 0rem;
   left: calc(50% - 48rem);
   background-color: #fff;
-  z-index: 1;
+  z-index:3;
   max-height: 0px;
   overflow: hidden;
-  -webkit-transition: max-height 0.4s linear;
-  -moz-transition: max-height 0.4s linear;
-  transition: max-height 0.4s;
+  -webkit-transition: max-height 1s ;
+  -moz-transition: max-height 1s ;
+  transition: max-height 1s;
 
   ul {
     columns: 4 auto;
@@ -148,13 +148,11 @@ header {
 }
 
 .dropdown:hover .dropdown-content {
-  // display: block;
   border: 1px solid #CDCED2;
   border-radius: 0 0 1rem 1rem;
-  border-top: 0;
+  border-top: 0rem;
   max-height: 100vh;
-
-
+  z-index: 9;
 }
 
 

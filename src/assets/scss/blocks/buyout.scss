@@ -186,6 +186,18 @@
     display: flex;
     justify-content: space-between;
     align-items: center;
+    
+    img {
+      transition: 1s;
+      transform: scale(1);
+    }
+    &:hover {
+      img {
+        transition: 1s;
+        transform: scale(1.1);
+      }
+
+    }
 
     @include breakpoint($xl-bp) {
       width: 100%;
