@@ -226,9 +226,15 @@ let options = {
   threshold: [0.5]
 };
 let observer = new IntersectionObserver(onEntry, options);
-let elements = document.querySelectorAll('.element-animation-title');
+let elementsTitle = document.querySelectorAll('.element-animation-title');
+let elementsImg = document.querySelectorAll('.element-animation-img');
 
-for (let elm of elements) {
+
+for (let elm of elementsTitle) {
+  observer.observe(elm);
+}
+
+for (let elm of elementsImg) {
   observer.observe(elm);
 }
 
