@@ -2,7 +2,8 @@
 
 .popup-requisition-wrapper,
 .popup-thanks-wrapper,
-.popup-reviews-wrapper {
+.popup-reviews-wrapper,
+.popup-reviews-thanks-wrapper {
   visibility: hidden;
   width: 100%;
   height: 100%;
@@ -36,6 +37,7 @@
     transform: scale(1);
     transition: .3s;
   }
+
 }
 
 .popup-requisition,
@@ -251,15 +253,18 @@ input:focus+label {
 
 .popup__icon {
   position: absolute;
-  top: 2rem;
-  right: 2rem;
+  top: 0;
+  right: 0;
   display: flex;
   align-items: center;
   justify-content: center;
   cursor: pointer;
-  width: 1.2rem;
-  height: 1.2rem;
+  padding: 1rem;
 
+  svg {
+    width: 1.2rem;
+    height: 1.2rem;
+  }
 }
 
 .popup__text {

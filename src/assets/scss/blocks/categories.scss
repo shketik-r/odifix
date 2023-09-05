@@ -26,7 +26,6 @@
 
 }
 
-.content-services {}
 
 .repair {
   width: 100%;
@@ -252,10 +251,8 @@
     line-height: 4.7rem;
     letter-spacing: 0em;
     text-align: left;
-    min-height: 2.9rem;
     position: relative;
     cursor: pointer;
-    padding-top: 0.4rem;
     margin-right: 1.9rem;
 
     @include breakpoint($xl-bp) {
@@ -302,8 +299,6 @@
 .content-services__price-mobile {
   margin-bottom: 5rem;
 }
-
-
 
 .service-center {
   width: 100%;
@@ -382,6 +377,7 @@
 
   .service-center__image {
     width: 60.5rem;
+
     @include breakpoint($xl-bp) {
       width: 100%;
     }

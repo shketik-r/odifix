@@ -1,10 +1,11 @@
 header {
-
+  width: 100%;
+  max-width: inherit;
+  position: relative;
   margin-top: 3rem;
   margin-bottom: 3rem;
   transition: 0.3s;
-
-
+ 
   @include breakpoint($xl-bp) {
     margin-top: 2rem;
     margin-bottom: 2rem;
@@ -13,15 +14,17 @@ header {
 
 
 .header-nav {
+  position: absolute;
+    width: 100%;
+  max-width: inherit;
+
   background: #fff;
-  width: 100%;
   padding: 1.5rem 2rem 1.5rem 2rem;
   border: 0.1rem solid #CDCED2;
   border-radius: 1rem;
   display: flex;
   align-items: center;
   justify-content: space-between;
-  position: relative;
   z-index: 6;
   transition: 0.5s;
 
@@ -173,10 +176,8 @@ header {
 
     &:hover,
     &:focus {
-
       box-shadow: 0 0.5em 0.5em -0.4em $blue;
       transform: translateY(-0.25em);
-
     }
 
     svg {
@@ -209,31 +210,32 @@ header {
 
 
 .header--sticky {
+  width: 100%;
+  max-width: inherit;
   position: fixed;
   top: 0;
-  width: 100%;
+
   background: #fff;
   z-index: 11;
   margin-top: 0rem;
   margin-bottom: 0rem;
-  transition: 0.3s;
-}
-
-.header--sticky+.content {
-  padding-top: 20rem;
-
-  @include breakpoint($xl-bp) {
-    padding-top: 14rem;
-  }
-
-}
-
-.header--padding {
   padding: 0 2rem;
   transition: 0.5s;
+  @include breakpoint($xl-bp) {
+    padding: 0.5rem 2rem;
+    right: 0;
+    left: 0;
+  }
+
+
+
+
+
+
 
   .header-nav__logo {
     img {
+      transition: 0.5s;
       width: 13rem;
     }
 
@@ -256,5 +258,11 @@ header {
 
     }
   }
-
 }
+.content{
+padding-top: 20.1rem;
+@include breakpoint($xl-bp) {
+  padding-top: 10.5rem;
+}
+}
+

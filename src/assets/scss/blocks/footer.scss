@@ -51,6 +51,7 @@
     color: #808080;
     font-weight: 400;
     text-align: center;
+
     @include breakpoint($sm-bp) {
       font-size: 1rem;
     }
@@ -118,11 +119,12 @@
         font-size: 1.4rem;
         line-height: 2.5rem;
       }
+
       @include breakpoint($sm-bp) {
-     margin-bottom: 1rem;
+        margin-bottom: 1rem;
       }
 
-      &:hover {
+      a:hover {
         font-weight: 700;
         color: $blue;
       }
@@ -158,9 +160,6 @@
       height: 2rem;
       transition: 0.5s;
 
-      &:hover {
-        transform: scale(1.1);
-      }
     }
   }
 
@@ -170,18 +169,12 @@
       align-items: center;
       gap: 1rem;
       transition: 0.5s;
-
-      &:hover {
-        transform: scale(1.1);
-      }
     }
 
     svg {
       width: 1.8rem;
       height: 1.8rem;
       transition: 0.5s;
-
-
     }
   }
 

@@ -2,7 +2,10 @@
   "name": "template",
   "version": "1.0.0",
   "description": "",
-  "author": "DevMinrat",
+  "author": "Ruslan_S",
+  "scripts": {
+    "build": "gulp build"
+  },
   "devDependencies": {
     "@babel/core": "^7.13.10",
     "@babel/preset-env": "^7.13.10",
